@@ -1,0 +1,303 @@
+Javacript is one of the three langauages all web developers must learn.
+1.HTML to define the content of the web pages.
+2.CSS to specify the layout of the web pages.
+3.Javascript to program the behavior of web pages.
+
+JAVASCRIPT CAN CHANGE HTML CONTENT
+One of the many Javscript methods is getElementById().
+The example below "finds"an HTML element(with id="demo"),and changes the element content(innerHTML) to "Hello Javascript":
+
+example
+document.getElementById("demo").innerHTML."Hello Javascript";
+
+Here's a comprehensive explanation of getElementById() in Javascript: 
+Purpose:
+-It's a method used to select a specific HTML element within a document based on its unique ID.
+-It's essential for manipulating elements accessing their content or changing their attributees for dynamic web page behaviour.
+
+syntax
+document.getElementById();
+
+Parameters
+id:A string representing the ID of thge element you want to select.IDs must be uniqwue within a document.
+
+Return Value
+-An element object representing the element with the given ID is found,it returns null.
+
+Example
+<div id="demo">This is a demo paragraph</div>
+<script>
+var element = document.getElementById("demo");
+element.style.color="red";
+<script>
+
+Common uses
+-Changing element context (eg.,text iamges)
+-Modifying element styles (eg.,colors,fonts)
+-Adding or removing elements.
+-Handling user events(e.g.,clicks,forms submissions)
+-Javascript accepts bith double and single quotes.
+
+Example
+document.getElementById('demo').innerHTML='Hello Javascript';
+document.getElementById("demo").innerHTML="Hello Javascript";
+
+JAVASCRIPT CAN CHANGE HTML ATTRIBUTE VALUES.
+-In this example Javascript changes the value of the src(source)attrbute of an <img> tag:
+<button onclick="documentgetElementById('myimage')src='pic-bullon.gif'">Turn on the light</button>
+
+<img id="myimage" src="pic_bulboff.gif" style = "width:100px">
+
+<button onclick = "document.getElementById('my image')src="pic_bulboff.gif">Turn off the light</button>
+</body>
+</html>
+
+JAVASCRIPT CAN CAHNGE HTML STYYLES(CSS)
+-Changing the style of an HTML element is a variant of changing an HTML attribute.
+example
+doccument.getElementById("demo").style.fontSize="35px";
+
+JAVASCRIPT CAN HIDE HTML ELEMENTS
+-Hiding HTML elements can be done by changing the display style:
+example
+document.getElementById("demo").style.display="none";
+
+JAVASCRIPT CAN SHOW HTML ELEMENTS
+-Showing hidden HTML elements can also be done by changing the display style;
+example
+document.getElementById("demo").style.display="block";
+
+JAVASCRIPT WHERE TO
+The <script> tag
+-In HTML,Javascript code is inserted between <script> and </script> tags.
+example
+document.getElementById("demo").innerHTML="My First Javascript";
+</script>
+
+NB;
+Old Javascript examples may use a attribute:<script type = "text/Javascript">
+-The type attribute is not required.Javscript is the default scripting language in HTML.
+
+JAVASCRIPT FUNCTIONS AND EVENTS
+-A JavaScript function is a block of JavaScript code,that can be executed when"called" for.
+-For example,a function can be called when an event occurs like when a user clicks a  button.
+
+JAVSCRIPT IN <HEAD> OR <BODY>
+-You can plavce any numbert of scripts in an HTML document scripts canbe placed in the <body> or in the <head> scetion of an HTML page,or both.
+
+JAVSCRIPT IN <HEAD>
+-In this function is places in the <head> section of s HTML page.
+-The function is invoked (called) when a button is clicked:
+example
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+function myFunction(){
+document.getElementById("demo").innerHTML="Paragrpah changed.";
+}
+</script>
+<?head>
+<body>
+<h2>Demo Javascript in Head </h2>
+<p id="demo">A paragraph</p>
+<button type="button" onclick="myFunction()">Try it </button>
+
+onclick-Thus an event attribute in HTML that specifies a Javascript Function tobe excuted when a certain elemenet is clicked.
+myfunction():This is the name of the JavaScript function that will be called when the element is clicked.The parenthesis indicates that it's a function call.
+
+HOW IT WORKS
+1.User clicks on the element:When a user clicks on an element with the onclick attribute,the browser triggers the spcified JavaScript function.
+2.Function execution:The browser locates the function named MyFunction() in JavaScript cvode and runs its code.
+
+-Onclick attribute can be used with various HTML elements including buttons,links,images,and more.
+-The function specified in the onclick attribute can perform any actions you want,such as:
+.Displaying alerts.
+.Changing the content of the page.
+.Validating form input.
+.Triggering animations.
+.ANd many more possibilities.
+
+EXTERNAL JAVASCRIPT
+-Scripts can be placed in external attributes:
+ERxternal file:myScript.js function.myFunction(){
+document.getElementById("demo").InnerHTML="Paragraph changed";
+
+-External scripts are practical when the same code is usedin many differnet web pages.
+-Javscript files have anextension.js
+-TO use an excternal scripts put the name of the script file in the src(source) attribute of a<script> tag:
+EXAMPLE
+<script src="myScript.js">
+</script>
+-You can place an external script reference in <head> or <body> as you like.
+-The script will behave if it was located exactly where the <script> tag is located.
+-External scripts cannot contain <script> tags.
+
+EXTERNAL JAVASCRIPT ADVANTAGES
+-Placing scripts in external files has some advantages:
+-It separates HTML and code,
+-Catched JavaScript files can speed up pages loads.
+
+-To add several scripts files toone page-use several script tags:
+EXAMPLE
+<script src="myScript1.js"></script>
+<script src="myScript2.js"></script>
+
+EXTERNAL REFERENCES
+-An external script can be referenced in 3 different ways:
+.With a file path(a full web address)
+.With a file path(like/js/)
+.Without any path.
+-This example uses a full URL to link to myScript.js:
+EXAMPLE
+<script src="https://www.w3schools.com/js/myScript.js"></script>
+
+-This example uses no path to link to myScript.js:
+EXAMPLE
+<script src="myScript.js"></script>
+
+-This example uses a filepath to link to myScript.js:
+EXAMPLE
+<script src="/js/myScript.js"></script>
+
+JAVASCRIPT OUTPUT
+JAVASCRIPT DISPLAY POSSIBILITIES
+-Javascript can"display"data in different ways.
+.Writing into an HTML element,using innerHTML.
+.Writing into the HTML output using document.write()
+.Writing into an alert box,using window.alert()
+.Writing into the browser console using console.log().
+
+USING HTML
+-To access an HTML element,Javascript can use the document.getElementById(id)method.
+-The id attribute defines the HTML element.The innerHTML property defines the HTML content:
+EXAMPLE
+<!DOCTYPE html>
+<html>
+<body>
+<h1>My first Web Page</h1>
+<p>My first paragraph</p>
+
+<p>id="demo"</p>
+
+<script> document.getElementById("demo").innerHTML=5+6; </script>
+</body>
+</html>
+
+-Changing the innerHTML property of an HTML element is a common way to display data in HTML.
+
+USING DOCUMENT.WRITE()
+-For testing purposes,it is convinent to use.document.write()
+
+EXAMPLE
+<script>
+document.write(5+6);
+</script>
+
+-Using document.write()after an HTML document is loaded,will delete all existing HTML;
+-The document.write()should only be used for testing.
+
+USING WINDOWS.ALERT()
+-You can skip the window keyword.
+-In Javascript,the window object is the global scope object.
+-This means that variables,properties,and methods by default belong to the window object.
+-This also means that specifying the window keyword is optional.
+EXAMPLE
+<script>
+alert(5+6);
+</script>
+
+USING CONSOLE.LOG()
+-For debugging purposes,you can call the console.log()method in the browser to display data.
+EXAMPLE
+<script>
+console.log(5+6);
+</script>
+
+JAVASCRIPT PRINT
+-JavaScript does not have only print object or print methods.
+-You cannot access devices from JavaScript.
+-The only exception is that you can call the widnow.print()memthod in the browser to print the content of the current window.
+EXAMPLE
+<!DOCTYPE HTML>
+<html>
+<body>
+<button onclick="window print()">Print this page</button>
+</body>
+</html>
+
+JAVASCRIPT STATEMENTS
+EXAMPLE
+let x,y,z //statement 1
+x=5  //statement 2
+y=6 //statement 3
+z=x+y //statement 4
+
+JAVASCIPT PROGRAMS
+-A computer program is a list of "instructions" to be "executed" by a computer.
+-In programming language these programming instructions are called statements
+-A Javascript program is a list of programming statement.
+
+-In HTML,Javascript programs are executed by the web browser.
+
+JAVASCRIPT STATEMENTS
+-Javascript statements are composed of:
+values,operators,expressions,keywords and comments.
+-This statement tells us the browser to write "Hello Dolly" inside an HTML element with id="demo"
+EXAMPLE
+document.getElementById("demo").innerHTML = "Hello Dolly";
+
+-Most Javascript programs contain many Javascript statements.
+-The statements are executed,one by one,in the same order as they are written.
+
+-Javascript programs (and Javascript statements)are often called Javascript code.
+semicolons;
+-semicolons separate Javscript statements.
+-Add a semicolon at the end of each executable statement.
+
+EXAMPLE
+let a,b,c //Declare 3 variables.
+a=5; //Assigns 5 to a
+b=6; //Assigns 6 to b
+c=a+b; //Assign the sum of a and b to c
+
+JAVASCRIPT WHITE SPACE
+-Javascript ignores multiple spaces.You can add white space to your script to make it more readable.
+-The following lines are equivalent:
+let person = "Hege";
+let person = "Hege";
+
+A good practice is to put spaces around operators(= + - * /):
+let x=y+z;
+
+JAVASCRIPT LINE LENGTH AND LINE BREAKS
+-For best readability,programmers often like to avoid code lines longer than 80 characters.
+-If a Javscript does not fit on one line,the best place to break it is after an operator:
+EXAMPLE
+document.getElementById("demo").innerHTML = "Hello Dolly!";
+
+JAVACRIPT CODE BLOCKS
+-Javascript statements can be grouped together in code blocks,inside curly brackets{...}
+-The purpose of code blocks is to define statements to be executed together,
+-One place you will find statements grouped together in blocks,is in Javascript functions:
+EXAMPLE
+function myFunction(){
+document.getElementById("demo1").innerHTML = "Hello Dolly!";
+document.getElementById("demo2").innerHTML = "How are you?";
+}
+
+JAVASCRIPT KEYWORDS
+-Javascript statements ofthen start with a keyword to identify the Javascript action to be performed.
+-Here is a list of some of the keywords you will learn:
+var-Declares a variable
+let-Declares a block variable
+const-Declares a block constant
+if-Marks a block of statements to the executed on a condition
+switch-Marks a block of executed in different cases
+for-Marks a block of statements to be executed in different cases
+function-Declares a function
+return-Exits a function
+try-Implements error handling to a block of statements.
+
+
+
