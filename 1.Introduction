@@ -19,7 +19,7 @@ syntax
 document.getElementById();
 
 Parameters
-id:A string representing the ID of thge element you want to select.IDs must be uniqwue within a document.
+id:A string representing the ID of thge element you want to select.IDs must be unique within a document.
 
 Return Value
 -An element object representing the element with the given ID is found,it returns null.
@@ -44,33 +44,31 @@ document.getElementById("demo").innerHTML="Hello Javascript";
 
 JAVASCRIPT CAN CHANGE HTML ATTRIBUTE VALUES.
 -In this example Javascript changes the value of the src(source)attrbute of an <img> tag:
-<button onclick="documentgetElementById('myimage')src='pic-bullon.gif'">Turn on the light</button>
-
 <img id="myimage" src="pic_bulboff.gif" style = "width:100px">
-
-<button onclick = "document.getElementById('my image')src="pic_bulboff.gif">Turn off the light</button>
+<button onclick = "document.getElementById('myimage').src="pic_bulbon.gif">Turn off the light</button>
 </body>
 </html>
 
-JAVASCRIPT CAN CAHNGE HTML STYYLES(CSS)
+JAVASCRIPT CAN CHANGE HTML STYLES(CSS)
 -Changing the style of an HTML element is a variant of changing an HTML attribute.
-example
+EXAMPLE
 doccument.getElementById("demo").style.fontSize="35px";
 
 JAVASCRIPT CAN HIDE HTML ELEMENTS
 -Hiding HTML elements can be done by changing the display style:
-example
+EXAMPLE
 document.getElementById("demo").style.display="none";
 
 JAVASCRIPT CAN SHOW HTML ELEMENTS
 -Showing hidden HTML elements can also be done by changing the display style;
-example
+EXAMPLE
 document.getElementById("demo").style.display="block";
 
 JAVASCRIPT WHERE TO
 The <script> tag
 -In HTML,Javascript code is inserted between <script> and </script> tags.
-example
+EXAMPLE
+<script>
 document.getElementById("demo").innerHTML="My First Javascript";
 </script>
 
@@ -83,12 +81,12 @@ JAVASCRIPT FUNCTIONS AND EVENTS
 -For example,a function can be called when an event occurs like when a user clicks a  button.
 
 JAVSCRIPT IN <HEAD> OR <BODY>
--You can plavce any numbert of scripts in an HTML document scripts canbe placed in the <body> or in the <head> scetion of an HTML page,or both.
+-You can place any number of scripts in an HTML document scripts can be placed in the <body> or in the <head> section of an HTML page,or both.
 
 JAVSCRIPT IN <HEAD>
--In this function is places in the <head> section of s HTML page.
+-In this function is places in the <head> section of a HTML page.
 -The function is invoked (called) when a button is clicked:
-example
+EXAMPLE
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -97,17 +95,17 @@ function myFunction(){
 document.getElementById("demo").innerHTML="Paragrpah changed.";
 }
 </script>
-<?head>
+</head>
 <body>
 <h2>Demo Javascript in Head </h2>
 <p id="demo">A paragraph</p>
 <button type="button" onclick="myFunction()">Try it </button>
 
-onclick-Thus an event attribute in HTML that specifies a Javascript Function tobe excuted when a certain elemenet is clicked.
+onclick-This an event attribute in HTML that specifies a Javascript Function to be excuted when a certain elemenet is clicked.
 myfunction():This is the name of the JavaScript function that will be called when the element is clicked.The parenthesis indicates that it's a function call.
 
 HOW IT WORKS
-1.User clicks on the element:When a user clicks on an element with the onclick attribute,the browser triggers the spcified JavaScript function.
+1.User clicks on the element:When a user clicks on an element with the onclick attribute,the browser triggers the specified JavaScript function.
 2.Function execution:The browser locates the function named MyFunction() in JavaScript cvode and runs its code.
 
 -Onclick attribute can be used with various HTML elements including buttons,links,images,and more.
@@ -120,8 +118,11 @@ HOW IT WORKS
 
 EXTERNAL JAVASCRIPT
 -Scripts can be placed in external attributes:
-ERxternal file:myScript.js function.myFunction(){
-document.getElementById("demo").InnerHTML="Paragraph changed";
+External file:myScript.js
+
+function.myFunction(){
+document.getElementById("demo").InnerHTML= "Paragraph changed";
+}
 
 -External scripts are practical when the same code is usedin many differnet web pages.
 -Javscript files have anextension.js
@@ -135,10 +136,10 @@ EXAMPLE
 
 EXTERNAL JAVASCRIPT ADVANTAGES
 -Placing scripts in external files has some advantages:
--It separates HTML and code,
+-It separates HTML and code.
 -Catched JavaScript files can speed up pages loads.
 
--To add several scripts files toone page-use several script tags:
+-To add several scripts files to one page-use several script tags:
 EXAMPLE
 <script src="myScript1.js"></script>
 <script src="myScript2.js"></script>
@@ -265,7 +266,7 @@ JAVASCRIPT WHITE SPACE
 -Javascript ignores multiple spaces.You can add white space to your script to make it more readable.
 -The following lines are equivalent:
 let person = "Hege";
-let person = "Hege";
+let person ="Hege";
 
 A good practice is to put spaces around operators(= + - * /):
 let x=y+z;
@@ -287,7 +288,7 @@ document.getElementById("demo2").innerHTML = "How are you?";
 }
 
 JAVASCRIPT KEYWORDS
--Javascript statements ofthen start with a keyword to identify the Javascript action to be performed.
+-Javascript statements often start with a keyword to identify the Javascript action to be performed.
 -Here is a list of some of the keywords you will learn:
 var-Declares a variable
 let-Declares a block variable
