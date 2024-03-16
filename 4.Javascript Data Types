@@ -1,0 +1,172 @@
+JAVASCRIPT DATA TYPES
+Javascript has 8 data types.
+1.String
+2.Number
+3.Bigint
+4.Boolean
+5.Undefined
+6.Null
+7.Object
+8.Symbol
+
+The Object Data Type
+1.Object
+2.An array
+3.A date
+
+EXAMPLES
+//Numbers:
+let length=16;
+let weight = 7.5;
+
+//strings
+let color = " Yellow";
+let lastName = "Johnson";
+
+//Boolean
+let x = true;
+let y = false;
+
+//Object 
+const person = {first Name:"John", lastName="Joe"};
+
+//Array Object
+const cars = ["Saab","Volvo","BMW"];
+
+//Date object
+const date = new Date
+("2022-03-25");
+
+NOTE
+-When Adding a number and a string,Javascript will treat the number as a string.
+
+Javascript evaluates expressions from left to right.Different sequence can produce different results:
+EXAMPLE
+let x = 16 + 4 + "Volvo"
+20 Volvo
+let x = "Volvo" + 16 + 4;
+Volvo 164
+
+In the first example,Javascript treats 16 and 4  as numbers until it reaches "Volvo"
+In the second example,since the first operand is a string,all operands are treated as strings.
+
+JAVASCRIPT TYPES ARE DYNAMIC
+Javascript has dynamic types.This means that the same variable can be used to hold different data types:
+EXAMPLE
+let x: //Now x is undefined
+x=5; //Now x is a a number
+x="John"; //Now x is a string
+
+JAVASCRIPT STRINGS
+A string(or a text string) is a series of characters like "John Doe"
+Strings are written with quotes.You can use single or double quotes:
+
+EXAMPLE
+//using double quotes:
+let carName1 ="Volvoxc60";
+//using single quotes:
+let carName2 = 'Volvoxc60';
+
+You can use quotes inside a string,as long as they dont match the quotes surronding the string:
+EXAMPLE
+//single quote inside double quotes:
+let answer1="it's alright";
+//single quotes inside double quotes:
+let answer2 = "He is called 'Johnny'";
+//double quotes inside single quotes::
+let answer3 = 'He is called "Johnny"';
+
+JAVASCRIPT NUMBERS
+All Javascript numbers are stored as decimal numbers(floating point)
+Nubers can be written with or without decimals:
+EXAMPLE
+//with decimals:
+let x1= 34.00;
+//without decimals:
+let x2= 34;
+
+Javascript numbers are always one type:double (64-bit floating point).
+
+JAVASCRIPT BOOLEAN
+Boolean can only have two values:trur or false;
+EXAMPLE
+let x = 5;
+let y = 6;
+let z = 6;
+
+(x==y) //Return true
+(x==z) //Return false
+
+JAVASCRIPT STRINGS
+Javascript arrays are written with square brackets.
+Array items are separated by commas.
+The following code declared (creates) an array called cars,containing three items (car names):
+EXAMPLE
+const cars=["Saab","Volvo","BMW"];
+
+Arrays indexes are zero-based which means the first item is [0],second is [1] and so on.
+
+JAVASCRIPT OBJECTS
+Javascript objects are written with curly braces {}
+Object properties are written as name:value pairs,separated by commas
+EXAMPLE
+const person = {firstName:"John",lastName:"Doe",age:"50",eyecolor:"blue"};
+
+The object (person) in the example above hs 4 properties:firstName,lastName,age and eyecolor
+
+THE typeof operator
+You can use the Javascript typeof operator to find the type of a javascript variable.
+The typeof operator returns the type of a variable or an expression.
+
+ typeof:" " //returns "strings"
+ typeof:"John" //returns "string"
+ typeof:"John Doe" //returns "strings"
+
+ EXAMPLE
+ typeof 0 //returns "number"
+ typeof 314 //returns "number"
+ typeof 3.14 //returns "number"
+ typeof(3) //returns "number"
+ typeof(3+4) //returns "number"
+
+ undefined
+ In Javascript,a variable without a value ahs the value undefined.The type is also undefined.
+
+ EXAMPLE
+ let car; //value is undefined, type is undefined
+ Any variable van be emptied by setting the value to undefined.The type will also be undefined.
+
+ EMPTY VALUES
+ An empty value has nothin to do with undefined.
+ An empty string has both a legal value and a type.
+
+ EXAMPLE
+ let car = " "; //the value is " ",the typeof is "string"
+
+ JAVASCRIPT FUNCTIONS
+ A Javascript function is a block of code designed to perform a particular task.
+ A javascript function is excuted when "something" invokes it (calls it)
+
+ EXAMPLE
+ //function to compute the product of p1 and p2.
+ function myFunction(p1,p2){
+ return p1 * p2;
+ }
+
+JAVASCRIPT FUNCTION SYNTAX
+A Javscript function is defined with the function keyword,followed by a name,followed by parenthesis()
+Function names can contain letters,digits,underscores,and dollar signs(same rules as variables)
+The parenthesis may include parenthesis names separated by commas:
+(parameter1,parameter2...)
+The code to be executed by the function is placed inside the curly braces {}
+function name (parameter1,parameter2,parameter3){ 
+//code to be executed
+}
+Function parameters are listed inside the parenthesis()in the function definition
+Function arguments are the values received by the function when it is invoked.
+Inside the function,the arguments(the parameters) behave as local variables.
+
+FUNCTION INVOCATION
+
+
+ 
