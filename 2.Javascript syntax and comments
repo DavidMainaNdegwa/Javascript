@@ -1,0 +1,175 @@
+Javascript syntax is the set of rules,how JavaScript programs are constructes:
+//How to use create variables:
+var x;
+var y;
+//How to use variables:
+x=5;
+y=6;
+let z=x+y;
+z=11
+JAVASCRIPT VALUES
+-Javascrpt syntax defines tow types ogf values:
+.Fixed values
+.Variable values.
+TEXTUAL DATA(STRING)
+"I love Javascript"
+"Javascript is fun"
+cosole.log("I love Javscript")
+"Javacript is fun"
+console.log("I love Javascript")
+INTEGERS $ FLOATS(NUMBERS)
+Integer is a whole number and float is a decimal number.
+EXAMPLE
+console.log(8)
+console.log(80.5)
+NOTE
+I have not used quotation marks inside the parenthesis because it will be considered a string.
+
+JAVASCRIPT VARIABLES
+let language = 'Javascript';
+console.log(language);
+
+let number = 5;
+console.log=5;
+
+var name = 'Jack';
+console.log(name);
+
+-Variables are used to store data but what if we want to store different data in the variables.You can assign new data into the variables.
+let name = "David";
+console.log(name);
+
+name="John";
+console.log(name);
+David
+John
+
+We aslo assign one value of a variable to another
+EXAMPLE
+let name = 'David';
+let surname = 'Perez';
+
+name=surname;
+console.log(name);
+Perez
+
+Another way to declare a variable is to use cosnt.
+Const is used to create values whose remain constant throughout the program.
+
+PRINT VARIABLES AND STRING IN SINGLE LINE
+let city = 'Nairobi';
+console.log("city is" + city);
+City is Nairobi
+//concatenation with vairables anf strings using the plus(+)
+
+let city='Nairobi';
+console.log('city:&{city}');
+
+EXAMPLE
+let city = 'Nairobi';
+let kfcLocation = 10;
+console.log("City:" + city + "kfcLocation:" + kfcLocation);
+City:Nairobi,kfcLocations:10
+
+EXAMPLE
+let city = 'Nairobi';
+let kfclocation=10;
+console.log(`City:${city},KFC Location:${kfcLocation}`);
+City:Nairobi,KFC Location:10
+
+VARIABLE NAMING CONVENTIONS
+-When we use good descriptive variable names it become easier to understood the code to make variable names descriptive
+we may need to use names having more than one word.We will follow the camel case format while giving names to our variables.
+-In camel case the first word will be of a small letters and the first letter of the stand word will be of capital letters.
+
+Fixed values are called literals.variable values are called variables.
+JAVASCRIPT LITERALS
+-The top most important syntax rules for fixed values are:
+1.Numbers are written with or without decimals:
+10.50
+1005
+2.Strings are text,written within double or single quotes:
+"John Doe"
+'John Doe'
+
+JAVASCRIPT  VARIABLES
+In a programming language,variables are used to store data values.
+Javascript uses the keyword var,let and const to decalre variables.
+An equal sign is used to assign values to variables.
+In this example,x is defined as a variable.Then,x is assigned(given)the value 6.
+let x;
+x=6;
+
+JAVASCRIPT OPERATORS
+Javascript uses arithmetic operators(+ - * /)to compute values:(5+6)*10;
+Javascript ises an assignment operator (=) to assign values to variables:
+let x,y;
+x=5;
+y=6;
+
+JAVSCRIPT EXPRESSIONS
+An expression is a combination of values variables and operators which computes to a value.
+The computation is called an evaluation.
+For exmaple,5*10 evaluates to 50:
+5*10
+Expressions can aslo contain variables values:
+x * 10;
+
+The values can be of various types,such as numbers and strings.
+-For example,"John" + " " + "Doe", evaluates to "John Doe"
+
+JAVASCRIPT KEYWORDS
+Javascript keywords are used to identify actions to be peroformed.
+The let keyword tells the browser to create variables:
+let x,y;
+x=5+6;
+y=x*10;
+The var keyword also tells the browser to create variables 
+var x,y;
+x=5+6;
+y=x*10;
+
+-In there examples,using var or let will produce the same result.
+
+JAVASCRIPT COMMENTS
+Not all Javascript statements are "executed"
+Code after double slashes//or between /* and */ is treares as a comment.
+Commens are ignored and willnot be executed:
+
+let x=5: //I will be excuted
+x=6; //I will not be executed
+
+JAVASCRIPT IDENTIFIERS/NAME
+-Identifiers are Javascript names
+-Identifiers ae used to name variables and keywords,and functions.
+-The rules for legal names are the same in most programming languages.
+-A Javascript name must begin with:
+.A letter (a-z or A-Z)
+.Or an underscorce(_)
+Subsequent characters may be letters,digits,underscroces,or dollar signs.
+
+NOTE
+Numbers are not allowed as the first characters in names.
+This way Javscript can easily distinguish identifiers from numbers.
+
+JAVASCRIPT IS CASE SENSITIVE
+All Javascript identifiers are case sensitive.
+The variables lastName and lastName are two different vairables:
+lastName = "Doe"
+lastname = "peterson"
+
+Javascript does not interpret LET or Let as the keyword let.
+
+JAVASCRIPT AND CAMEL CASE
+Historically programmers have used different ways of joining multiple words into one variable name:
+Hyphens
+first-name,lst-name,master-card,inter-city
+
+Hyphens are not allowed in Javascript,they are reserved for subtractions.
+Underscore:
+first-name,last-name,master-card,inter-city
+Upper Camel Case
+FirstName,LastName,MaterCard,InterCity.
+Lower Camel Case
+Javascript programmers tend to use camel case that starts with a lowercase letters:
+firstName,lastName,masterCard,interCity.
