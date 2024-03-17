@@ -1075,3 +1075,55 @@ With BigInt the total number of supported data types in Javascript is 8:
 BigInt Operators
 Operators that can be used on Javascript Number can also be used on BigInt.
 BigInt Multiplication
+Example
+let x = 9007199254740995n;
+let y = 900719925440995n;
+let z = x * y;
+NOTE
+Arithmetic between a BigInt and a Number is not allowed(type conversion lose information)
+Unsigned right shift (>>>) cannot be done on a BigInt (it does not have a fixed width).
+
+BIGINT DECIMALS
+A BigInt can not have decimals.
+
+BIGINT,Hex,Octal and Binary
+BigInt can also be written in hexadecimal,octal,or binary notation:
+BIGINT HEX EXAMPLE
+let hex = 0x2000000003n;
+let hex = 0.4000000003n;
+
+MINIMUM AND MAXIMUM SAFE INTEGERS
+MAX-SAFE-INTEGER
+MIN-SAFE INTEGER
+
+MAX-SAFE-INTEGER
+EXAMPLE
+let x = Number.MAX_SAFE_INTEGER;
+
+MIN_SAFE_INTEGER
+EXAMPLE
+let x = Number.MIN_SAFE_INTEGER;
+
+NEW NUMBER METHODS
+Number is integer()
+Number is safe Integer()
+
+THE NUMBER.ISINTEGER()
+METHOD
+The Number.isInteger() method returns true if the argument is an integer.
+
+EXAMPLE:isInteger()
+Number.isInteger(10);
+Number.isInteger(10.5);
+true 
+false
+
+The Number.isSafeInteger()Method
+A safe integer is an integer that can be exactly represented as a double precision number.
+The Number.isSafeInteger() method returns true if the argument is a safe integer.
+
+EXAMPLE is SafeInteger()
+Number.isSafeInteger(10);
+Number.isSafeInteger(12345678901234567890);
+
+Safe integers are integers from -(2^53 - 1)to + (2^53 - 1)
