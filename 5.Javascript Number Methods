@@ -1,0 +1,52 @@
+These number methods can be used on all Javascript numbers:
+toString() Returns a number as a string
+toExpontential() Returns a number written in exponential notation 
+toFixed() Returns a number written with a number of decimals
+toPrecision() Returns a number written with a specified length
+ValueOf() Returns a number as a number.
+
+The toString() method
+The toString() method returns a number as a string.
+All number methods can be used on any type of numbers(literals,variables,or expressions):
+
+EXAMPLE
+let x = 123;
+x.toString();
+(123).toString();
+(100 + 23).toString();
+
+OUTPUT
+123
+123
+123
+
+THETOEXPONENTIAL()METHOD
+toExpontential returns a string,with a number rounded and written using expotential notation.
+A parameter defines the number of characters behind the decimal point:
+
+EXAMPLE
+let x = 9.656;
+x.toExpotential(2);
+x.toExpotential(4);
+x.toExpotential(6);
+
+OUTPUT
+9.656e + 0
+9.66e + 0
+9.6560e + 0
+9.656000e + 0
+The parameter is optional if you dont specify it,Javascript will not round the number.
+
+The toFixed()method
+toFixed() returns a string with the number written a specified number of decimal.
+
+EXAMPLE
+let x = 9.656;
+x.toFixed(0);
+x.toFixed(2);
+x.toFixed(4);
+x.toFixed(6);
+
+OUTPUT
+10
+9.66
