@@ -609,5 +609,248 @@ Example
 const fruits = ["Banana","Orange","Apple","Mango"]
 lt.size=fruits.length;
 4
+
 Javascript Array toString()
 The Javscript method toString converts an array to string of (comma separated)
+EXAMPLE
+const fruits = ["Banana","Orange","Apple","Mango"]
+document.getElementById("demo").innerHTML=fruits.toString():
+Result:
+Banana,Orange,Apple,Mango
+
+Javascript Array at()
+Get the third element of fruits using at()
+const fruits = ["Banana","Orange","Apple","Mango"];
+let fruits = fruits.at(2);
+Apple
+
+Get the trid element using [];
+const fruits = ["Banana","Orange","Apple","Mango"];
+let fruits = fruits[2];
+Apple
+
+Javascript Array joint()
+The join() method also joins all array elements into a string
+It behaves just like toString() but in addition you can specifyth eseparator:
+Example
+const fruits = ["Banana","Orange","Apple","Mango"];
+document.getElementById("demo").innerHTML = fruits.join(" * );
+Result:
+Banana * Orange * Apple * Mango
+
+Popping and Pushing 
+When you work wih arrays it is easy to remove elements and add new elements.
+This is what popping anf pushing is
+Popping items out of an array or pushing items into an arry;
+Javascript Array pop()
+The pop() method removes the lat element from an array:
+Example
+const fruits = ["Banana","Orange","Apple","Mango"];
+fruits.pop();
+Banana,Orange,Apple
+
+The pop() method returns the value that was "popped out":
+Example
+const fruits = ["Banana","Orange","Apple","Mango"];
+let fruits = fruits.pop()
+Mango
+
+Javascript Array Push
+The push() method adds a new element to an array (at the end):
+Example
+const fruits = ["Banana","Orange","Apple","Mango"];
+fruits.push("Kiwi");
+Banana,Orange,Apple,Kiwi
+The push() method returns thenew array length:
+5
+Banana,Orange,Apple,Mango,Kiwi
+
+let length = fruits.psuh("Kiwi");
+
+Shifting Elements
+Shifting is equivalent to popping but working on the first element instead of the last 
+
+Javascript Arrays Shift
+The shift() method removes the first array element and "shifts" all other element to a lower elements
+Example
+const fruits = ["Banana","Orange","Apple","Mango"];
+let fruit = furit.shift();
+Banana,Orange,Apple,Mango
+
+Javascript Array unshifted()
+The unshift() method adds a new element to an array (at the beginning) and "Unshifts" older elements:
+Example
+const fruits = ["Banana","Orange","Apple","Mango"];
+fruits.unshift("Lemon");
+lemon,Banana,Orange,Apple,Mango
+
+The unshift() method returns the new array length:
+Example
+const fruits =  ["Banana","Orange","Apple","Mango"];
+fruits.unshift("Lemon");
+5
+Lemon,Banana,Orange,Apple,Mango
+
+Changing Elements
+Array elements are accessed using their index number
+Array indexes are accessed using their index number:
+Array indexes start with 0:
+[0] is the first array element [1] is the second
+
+Example
+const fruits =  ["Banana","Orange","Apple","Mango"];
+fruits[0] = "Kiwi";
+Kiwi,Banana,Orange,Apple,Mango
+
+Javascript Array length
+The length poperty provides an easy way to append a new element to an array:
+Example
+const fruits = ["Banana","Orange","Apple","Mango"];
+fruits[fruits.length] = "Kiwi";
+Banana,Orange,Apple,Mango,Kiwi
+
+Javascript Array Deleted
+WARNING!
+Using delete() leaves Undefined holes in an array
+Use pop() or shift() instead.
+
+Example
+const fruits = ["Banana","Orange","Apple","Mango"];
+delete fruits[0];
+
+Merging Arrays (concatenating)
+In programming languages,concatenation means joining strings end-to-end
+Contantenation "show" and "ball" gives "snowball"
+Contantenatingarrays means joining arrays end-to-end.
+Javscript Array Concat()
+The concat() method creates a new array by merging exisitng arrays.
+Example
+const myGIrls = ["Cecilie","Lone"];
+const myBoys = ["Emil","Tobias","linus"];
+const myChildren = myGirls.concat(myBoys);
+Cecilie,Lone,Emil,Tobias,Linus
+
+NOTE
+The concat() method does not change the existing arrays.It always returns a new array.
+The concat() method can take any number of array arguments.
+
+EXAMPLE(Merging Three Arrays)
+const arr1 = ["cecilie","Lone"];
+const arr2 = ["Emil","Tobias",Linus"];
+const arr3=["Robin","Morgan"];
+const mychildren = arr1.concat(arr2,arr3);
+Cecilie,Lone,Emil,Tobias,Linus,RObin,Morgan
+The concat() method ca aslo take strings as arguments:
+Example (Merging an Array with values)
+const arr1 = ["Emil","Tobias","Linus"];
+const mycHildren = arr1.concat("Peter");
+Emil,Tobias,Linus,Peter
+
+Array copyWithin()
+The copyWithin() method copies array elements to another position in an array 
+EXAMPLE
+Copy to index2,all elements from index 0:
+const furits = ["Banana","Orange","Apple","Mango"];
+fruits.copyWithin(2,0);
+Banana,Orange,Banana,Orange
+
+Copy to index 2 the element form index 0 to 2:
+const fruits = ["Banana","Orange","Apple","Mango","Kiwi"};
+fruits.copyWitrhin(2,0,2);
+Banana,Orange,Banana,Orange,Orange,Kiwi,Papaya
+
+NOTE
+The copyWithin() method overwrites the exisitng values 
+The copyWithin() method does no add items to the array
+The copyWithin() method dfoes not change the length of the array
+
+Flattening an Array
+Flattening an array is the process of reducing the dimensionalioty of an array
+Flattening is useful when you want to conert a multi-dimensional array into one-dimensional array
+
+Javsascript Array flat()
+The flat() method  creates a new array with sub-array elements concatenated to a specified depth.
+EXAMPLE
+const newArr = myArr = flat();
+123456
+
+Spilicing and Splicing 
+Arrays
+The splice() method adds new items to an array
+THE slice() method slices ouyt a piece of an array
+EXAMPLE
+const.fruits = ["Banana","Orange","Apple","Mango"];
+fruits.splice(2,0,"Lemon","Kiwi");
+Banana,Orange,Lemon,Kiwi,Apple,Mango
+
+The first paramter(2) defines the psoition where new elements should be  added (spliced,in)
+The second paramter (0) defines how many elements shuld be removed
+The rest of the parameters ("Lemon","Kiwi") define the new elements to be added
+The splice() method returns an array with the deleted items:
+Example
+const fruits = ["Banana","Orange","Apple","Mango"];
+fruits.splice(2,2,"Lemon","Kiwi");
+Banana,Orange,Lemon,Kiwi,Apple,MAngo
+
+USING SPLICE() TO REMOVE ELEMENT
+With clever paramter setting you can use splice() to remove elements without leaving "holes" in the array:
+EXAMPLE
+const fruits = ["Banana","Orange","Apple","Mango"];
+fruits.splice(0,1);
+Orange,Apple,Mango
+
+The frist parameter (0) defines the position where new elements should be added (spliced in).
+The second parameter (1) defines how many elements should be removed.
+The rest of the parameter are ommitted.No new elements will be added.
+
+Javscript Array toSpliced()
+The difference betweeen the new toSpliced() method and the old splice() method is that the new method is that the new
+creates a new array keeping the original array unchanged while the old method altered the original array.
+
+EXAMPLE
+const months = ["Jan","Feb","Mar","Apr"];
+const spliced = moths.toSpliced(0,1);
+Feb,Mar,Apr
+
+Javscript Array Slice()
+The slice() ,ethod slices out a piece of an array to a new array:
+EXAMPLE
+Sklice out a partof an array starting from array element1("orange"):
+const fruits["Banana","Orange","Lemon","Apple","Mango"];
+const citrus = fruits,slice(1);
+Orange,Lemon,Apple,Mango
+
+NOTE
+The slice() method creates a new array
+The slice() method does not remove any elements from the source array.
+
+EXAMPLE
+Slice  out a part of an array starting from array elements 3 ("Apple"):
+cost fruits=["Banana","Orange","Apple","Mango"];
+const citrus = fruits.slice(3);
+Apple,Lemon
+
+The slice() methods can taketwo arguments like slice(1,3)
+The method then selects elements from the start argument and up to (but not including) the end argument.
+
+EXAMPLE
+const fruits = ["Banana","Orange","Lemon","Apple","Mango"];
+const citrus = fruits.slice(1,3);
+Orange,Lemon
+
+If the end argumebnt is ommitted like in the first examples the slice() method slices out the rest of the array
+EXAMPLE
+const fruits = ["Banana","Orange","Lemon","Apple","Mango"];
+lemon,Apple,Mango
+
+AUTOMATIC toString()
+Javscript automatically converts an array to a comma separated string when a primitive value is expected.
+This is always the case when you try to output an array.
+These two examples will produce the same result:
+EXAMPLE
+const fruits = ["Banana","Orange","Apple","Mango"];
+document.getElementById("demo").innerHTML = fruits.toString();
+Banana,Orange,Apple,Mango
+
+documnet.getElementById("demo").innerHTML = fruits;
+Banana,Orange,Apple,Mango
