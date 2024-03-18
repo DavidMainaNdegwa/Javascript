@@ -50,3 +50,564 @@ x.toFixed(6);
 OUTPUT
 10
 9.66
+9.6560
+9.65600
+
+toFixed(2) is perfect for working with money.
+
+The tOPrecision() Method
+toPrecision() returns a string,with a number written with a specified length:
+EXAMPLE
+let x = 9.656;
+x.toPrecision();
+x.toPrecision(2);
+x.toPrecision(4);
+x.toPrecision(6);
+OUTPUT
+9.656
+9.7
+9.656
+9.65600
+
+The valueOf()Method
+valueOf() returns a number as a number
+EXAMPLE
+let x = 128;
+x.valueOf();
+(123).valueOf();
+(100+23).valueOf();
+OUTPUT
+123
+123
+123
+
+In Javascript a number can be primitive value (type of = number) or an object (type of = object) 
+The valueOf() method is used internally in Javascript to convert number objects to primitive values
+There is no reason to use it in your code.
+All Javascript data types have a valueOf() and a toString() method.
+
+CONVERING VARIABLES TO NUMBER
+There are 3 Javascript methods that can be used to convert a variable to a number.
+Number() Returns a number converted from its argument
+parseFloat()Parses its argument and returns a floating point number
+parseInt()Parses its argument and returns a whole number
+
+The methods above are not number methods.They are global Javascript methods.
+
+THE NUMBER() METHOD
+The number()method can be used to convert Javascript vairables to numbers.
+
+EXAMPLE
+Number(true);
+Number(false);
+Number("10");
+Number(" 10");
+Number("10 ");
+Number(" 10 ");
+Number("10.33");
+Number("10,33");
+Number("10 33");
+Number("John");
+
+If the number cannot be converted,NaN (Not a number) is returned.
+
+OUTPUT
+1
+0
+10
+10
+10
+10
+10.33
+NaN
+NaN
+NaN
+
+The Number() Method
+Number() can also convert a date to a number.
+EXAMPLE
+Number(newDate("1970-01-01"))
+0
+
+NOTE
+The Date() method returns the number of millisecond since 1.1.1970
+The number of millisecond between 1970-01-02 and 1970-01-02
+
+The number of millisecond since 1970-1-02 and 1970-01-01 is 86400000:
+EXAMPLE
+Number(new Date("1970-01-02"))
+OUTPUT
+86400000
+EXAMPLE
+Number(new Date ("2017-09-30"))
+OUTPUT
+1506729600000
+
+The parseInt() Method
+parseInt() parses a string and returns strinng and returns a whole number.Spaces are allowed.Only the first number is returned.
+EXAMPLE
+parseInt("-10");
+parseInt("-10.33");
+parseInt("10");
+parseInt(""10.33);
+parseImt("10 20 30");
+parseInt("10 years");
+parseInt("years 10");
+OUTPUT
+-10
+-10
+10
+10
+10
+10
+NaN
+
+The parseFloat()Method
+parseFloat()parses a string and returns a number.Spaces are allowed Only  the first number is returned::
+EXAMPLE
+parseFloat("10");
+parseFloat("10.33");
+parseFloat("10 20 30");
+parseFloat("10 years");
+parseIntFloat("years 10");
+OUTPUT
+10
+10.33
+10
+10
+NaN
+
+Number Object Methods
+These object methods belong to the Number object:
+Number.isInteger()-Return true if the argument is an integer.
+Number.isSafeInteger()-Returns true if the argument is a safe intger
+Number.parseFloat()-Converts a string to a number.
+Number.parseInt()-Converts a string to a number
+
+NUMBER METHODS
+CANNOT BE USED ON VARIABLES
+The number methods above belong to the Javascript Number Object
+These methods can only be accessed like Number.isInteger()
+Using X.isInteger() where x is a variablee,will result in an error:
+TypeErrorX.isInteger is not a function.
+
+THE Number.isInteger()Method
+The number.isInteger() method returns true if the argument is an integer
+EXAMPLE
+Number.isInteger(10);
+Number.isInteger(10.5);
+OUTPUT
+true
+false
+
+TThe Number.isSafeIntegr()Method
+A safe integer is an integer that can be exactly represented as a double precision  number.
+The Number.isSafeInteger() method returns true if the argument is a safe integer.
+EXAMPLE
+Number.isSafeInteger(10);
+Number.isSafeInteger(1 2 3 4 5 6 7 8 9 0);
+OUTPUT
+ture
+false
+
+The Number.parseFloat()Method
+Number.parseFloat() parses a string and returns a number
+Spaces are allowed only the first number is returned.
+EXAMPLE
+Number.parseFloat("10");
+Number.parseFloat("10.33");
+Number.parseFloat("10 20 30");
+Number.parseFloat("10 years");
+Number.parseFloat("years 10");
+OUTPUT
+10
+10.33
+10
+10
+NaN
+
+NOTE
+The Number methods Number.parseInt() and Number.parseFloat() are the same as the Global method 
+parseInt() and parseFloat()
+The purpose is modularization of globals(to make it easier to use the same Javascript code outside the browser).
+
+THE Number.parseInt() Method
+Number.parseInt() parses a string and returns a whole number.
+Spaces are allowed.Only the first number is returned:
+EXAMPLE
+Number.parseInt("-10");
+Number.parseInt("-10.33");
+Number.parseInt("10");
+Number.parseInt("10 20 30");
+Number.parseInt("years 10");
+OUTPUT
+-10
+-10
+10
+10
+10
+10
+NaN
+
+Javascript Number Properties
+EPSLON - The difference between 1 and the smallest number > 1
+MAX-VALUE - The largest number possible in Javascript
+MIN-VALUE - The smallest number possible in Javascript
+MAX-SAFE-INTEGER - The maximum safe integer(2^53 - 1)
+MIN-SAFE-INTEGER - The minimum safe integer(2^53 - 1)
+POSITIVE_INFINITY - Infinity(returned on overflow)
+NEGATIVE_INFINITY - Negative infinity(returned on overflow)
+NaN - A "Not -a- number" value
+
+JAVASCRIPT EPLISON
+Number.EPLISON is the difference between the smallest floating point number greater than 1 and 1
+EXAMPLE
+let x = Number.EPLISON;
+OUTPUT
+2.2044609250313e.16
+
+JAVASCRIPT MAX-VALUE
+Number.MAX-VALUE is a constant representing the largest possible number in Javascript
+EXAMPLE
+let x = Number.MAX - VALUE;
+OUTPUT
+The largest possible number in Javascript is: 1.7976931348623157e+308
+
+Number Properties cannot be used on Variables
+Number properties belong to the Javascript
+NUMBER OBJECT
+These properties can be only accessed as NUMBER.MAX-VALUE:
+using x.MAX-VALUE where x is a variable or a value,will return undefined:
+EXAMPLE
+let x = 6;
+X.MAX-VALUE;
+OUTOUT
+undefined
+
+JAVASCRIPT MIN-VALUE
+Number.MIN-VALUE is a constant representing the lowest possible number in Javscript:
+EXAMPLE
+let x = Number.MIN-VALUE;
+OUTPUT
+5e-324
+
+JAVASCRIPT MAX-SAFE-INTEGER
+Number.MAX-SAFE-INTEGER represents the maximum safe integer in Javascript.
+Number.MAX-SAFE-INTEGER is (2^53-1)
+EXAMPLE
+let x = Number.MAX_SAFE_INTEGER;
+OUTPUT
+9007199254740991
+
+JAVASCRIPT MIN-SAFE-INTEGER
+Number.MIN-SAFE-INTEGER represents the minimum safe integer in Javascript
+Number.MIN-SAFE-INTEGER is (2^53-1)
+EXAMPLE
+let x = Number.MIN-SAFE-INTEGER;
+OUTPUT
+-9007199254740991
+
+JAVASCRIPT POSITIVE - INFINITY
+EXAMPLE
+let x = Number.POSITIVE_INFINITY;
+
+POSITIVE_INFINITY is returned on overflow;
+
+JAVASCRIPT NEGATIVE-INFINITY
+EXAMPLE
+let x = Number.NEGATIVE.INFINITY;
+
+NEGATIVE_INFINITY is returned on overflow:
+let x = -1/10;
+
+JAVASCRIPT NaN-Not a Number
+NaN is a Javascript reserved word for a number that is not a legal number
+EXAMPLE
+let x = Number.NaN;
+Trying to do arithmetic with a non-numeric string will result in NaN(Not a Number)let x= 100/"Apple";
+
+JAVASCRIPT ARRAYS
+An array is a special vairable which can hold more than one value
+const cars = {"Saab","Volvo","BMW"];
+
+Why use Arrays
+If you have a list of items ( a list of car names for example) storing the cars in single variables could look like this:
+let car1 = "Saab";
+let car2 = "Volvo";
+let car3 = "BMW";
+
+However if you want to loop through the cars and finf a specific one?
+And what if you had not 3 cars but 300?
+The solution is an Array
+An array can hold many values under a single name and you can access the values by reteering to an index number
+
+Creating an array
+Using an array literal is the easiest way to create a Javascript Array
+Syntax:
+const array-name = [item1,item2,...]
+It is a common practice to declare arrays with the const keyword
+You can also create an array and then provide the elements:
+EXAMPLE
+cosnt cars = [];
+cars[0] = "Saab";
+cars[1] = "Volvo";
+cars[2] = "BMW";
+
+Using the Javascript Keywords new
+EXAMPLE
+const cars = new Array ("Saab","Volvo","BMW");
+The two example above do exactly the same.
+There is no need to use new Array()
+For simplicity,readability and execution speed,use any literal method
+
+Accessing Array Elements
+const cars = ["Saab","Volvo","BMW"];
+let cars = cars[0];
+
+Javascript array elements can be accessed using numeric indexes
+(starting from 0 Saab)
+
+Changing an Array Element
+This statement changes the value of the first element in cars:
+EXAMPLE
+const cars = ["Saab","Volvo","BMW"];
+cars[0] = "ope1";
+
+CONVERTING ARRAY TO A STRING
+The Javascript method toString() converts an array to a string of (comma separated) array values:
+Example
+const fruits = ["Banana","Orange","Mango"];
+document.getElementById.innerHTML=fruits.toString();
+RESULT
+Banana,Orange,Apple,Mango
+
+ACCESSING THE FULL ARRAY
+With Javascript,the full array can be accessed by referring to the array name:
+EXAMPLE
+const cars = ["Saab","Volvo","BMW"];
+document.getElementById("demo").innerHTML=cars;
+Saab,Volvo,BMW
+
+ARRAYS ARE OBJECTS
+Arrays are a special type of objects.The typeof operator in Javascript returns "object" for arrays
+But,Javascript arrays are best described as arrays.
+Arrays use numbers to access its "elements" 
+In this example,person[0] returns John:
+ARRAY
+const person = ["John","Doe"46];
+John
+
+Objects use names to access its "members"
+In this example,person.firstName returns John:
+Object
+const person = {
+firstName:"John",lastName:"Doe",age:46
+};
+
+John
+
+ARRAY ELEMENTS CAN BE OBJECTS
+Javascript variables can be objects.Arrays are special kinds of objects.
+Because of this,you can have variables of different types in the same Array.
+You can have objects in an Array.You can have functions in an Array.You can have arrays in an Array.
+myArray[0] = Date.now;
+myArray[1] = myFunction;
+myArray[2] = myCars;
+
+ARRAYS PROPERTIES AND METHODS
+The real strength of Javascript arrays are the built - in array properties and methods
+cars.length //Returns the number of elements
+cars.sort() //Sorts the array
+
+THE LENGTH PROPERY
+The length property of an array returns the length of an array (the number of an array elements)
+EXAMPLE
+const fruits = ["Banana","Orange","Apple","Mango"];
+let length = fruits.length;
+4
+
+The length property is always one more the highest array index
+
+ACCESSING THE FIRST ARRAY ELEMENTS
+EXAMPLE
+const fruits = ["Banana","Orange","Apple","Mango"];
+let fruit = fruits[0];
+Banana
+
+ACCESSING THE LAST ARRAY ELEMENT
+EXAMPLE
+const fruits = ["Banana","Orange","Apple","Mango"];
+let fruits = fruits[fruits.length -1];
+Mango
+
+LOOPING ARRAY ELEMETNS
+One way to loop through an array is uysing a for loop:
+EXAMPLE
+const furits =["Banana","Orange","Apple","Mango"];
+let flen = fruits.length;
+let text = "<ul>"
+for (LET I = 0; I < FLEN;I++)
+{
+TEXT += "<li>" = fruits[i] + "</li>";
+}
+text += "</ul>";
+
+LOOPING ARRAY
+Banana
+Orange
+Apple
+Mango
+
+You can also use the Array.For each() function:
+EXAMPLE
+const fruits = ["Banana","Orange","Apple","Mango"];
+let texts = "<ul>"
+fruits.forEach(myFunction);
+text += "<ul>"
+function myFunction(value) {
+text += "<ul>" + value + "<ul>" 
+}
+
+call a function for each array element:
+Banana
+Orange
+Apple
+Mango
+
+ADDING ARRAY ELEMENTS
+The easiest way to add a new array element to an array is using the push()method:
+EXAMPLE
+const fruits = ["Banana","Mango","Orange","Apple"];
+fruits.push("Lemon");
+//Adds a new element (lemon) to fruits
+
+New element can also be added to an array using the length property
+EXAMPLE
+const furits = ["Banana","Orange","Apple","Mango"];
+furits[fruits.length] = "Lemon"; //Adds "Lemon" to fruits
+
+WARNING!
+Addiing elements with high indexes can create underfind "holes" in an array:
+EXAMPLE
+const frutis = ["Banana","Orange","Apple"];
+fruits[6] = "Lemon"; //Creates underfined "holes" in fruits
+
+Banana
+Orange
+Apple
+underfined
+underfined
+underfined
+Lemon
+
+ASSOCIATIVE ARRAYS
+Many programming languages support arrays with named indexes
+Arrays with named indexes are called associative arrays (or lashes)
+Javascript does not supprot arrays with named indexes
+In Javascript,arrays alwasy use numbered indexes
+
+EXAMPLE
+const person= [];
+person[0] = "John";
+person[1] = "Doe";
+person[2] = 46;
+
+person.length; //will return 3
+person[0]; //will return "John"
+
+WARNING!!
+If you use namd indexes Javascript will redefine the array to an object.
+After that,some array methods and properties will produce incorrect results
+EXAMPLE
+const person = [];
+person["firstName"] = "Doe";
+person["age"] = 46;
+person.lenth; //will return 0
+person[0]; //will return undefined
+
+undefined 0 
+
+THE DIFFERENCE BETWEEN ARRAYS AND OBJECTS
+In Javascriot,arrays use numbered indexes.
+In Javascript,objects use named indexes.
+
+Arrays are a special kind of objectrs with numbered indexes
+
+WHEN TO USE ARRAYS
+When to use objects
+Javascript does not support associative arrays
+You should use objects when you want the element names to be string(text)
+You should use arraays when you want the element names to be nubers
+
+JAVASCRIPT NEW ARRAYS
+Javascript has a built in array constructor new Array() 
+But you can safely use[] instead
+These two different statements bth create a new empty array named points:
+const points = new Array()
+conest points = [];
+ These two different statements both create new array containing 6 numbers:
+const points = new Array(40,100,1,5,25,10);
+const points = [40,100,1,5,25,10];
+40
+The new keyword can produce some unexpected results:
+//create an aray with three elements
+const points = new Array (40,100,1);
+40,100,1
+
+//create an array with one element ???
+constpoints = new Array(40);
+
+A COMMON ERROR
+const points = [40];
+is not the same as const points = new Array(40);
+
+//create an array with one element
+conest points = new Array(40);
+
+undefined
+
+HOW TO RECOGNIZE AN ARRAY
+A common qwuestion is:How do i know if a varible is an Array?
+The problem is tjht the Javascript operator typeof returns "objects":
+const fruits = ["Banana","Orange","Apple"];
+let type=typeof frutis;
+
+The type operatoe returns objects because a Javascript array is an object.
+
+Solution 1:
+To solve this problem ECMA Script 5 (Javasript 2009) defned a new method Array.isArray();
+const fruits = ["Banana",""orange","Apple"];
+document.getElementById("demo").innerHTML = rray.isArray(fruits);
+
+true
+Solution 2
+The instanceOf operator returns true if anobject is created by a given constructor:
+
+const fruits = ["Banana","Orange","Apple"];
+fruits instanceof Array;
+True
+
+JAVASCRIPT ARRAY METHODS
+Array length
+Array toString()
+Array at()
+Array join()
+Array pop()
+Array push()
+Array shift()
+Array unshift()
+Array delete()
+Array concat()
+Array copyWithin()
+Array splice()
+Array toSpliced()
+Array slice()
+
+Javascript Array length
+The length property returns the length(size) of an array:
+Example
+const fruits = ["Banana","Orange","Apple","Mango"]
+lt.size=fruits.length;
+4
+Javascript Array toString()
+The Javscript method toString converts an array to string of (comma separated)
