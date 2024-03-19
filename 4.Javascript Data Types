@@ -89,6 +89,7 @@ Javascript numbers are always one type:double (64-bit floating point).
 
 JAVASCRIPT BOOLEAN
 Boolean can only have two values:trur or false;
+
 EXAMPLE
 let x = 5;
 let y = 6;
@@ -97,22 +98,24 @@ let z = 6;
 (x==y) //Return true
 (x==z) //Return false
 
-JAVASCRIPT STRINGS
+JAVASCRIPT ARRAYS
 Javascript arrays are written with square brackets.
 Array items are separated by commas.
 The following code declared (creates) an array called cars,containing three items (car names):
+
 EXAMPLE
 const cars=["Saab","Volvo","BMW"];
 
 Arrays indexes are zero-based which means the first item is [0],second is [1] and so on.
 
 JAVASCRIPT OBJECTS
-Javascript objects are written with curly braces {}
-Object properties are written as name:value pairs,separated by commas
+Javascript objects are written with curly braces {}.
+Object properties are written as name:value pairs,separated by commas.
+
 EXAMPLE
 const person = {firstName:"John",lastName:"Doe",age:"50",eyecolor:"blue"};
 
-The object (person) in the example above hs 4 properties:firstName,lastName,age and eyecolor
+The object (person) in the example above has 4 properties:firstName,lastName,age and eyecolor.
 
 THE typeof operator
 You can use the Javascript typeof operator to find the type of a javascript variable.
@@ -130,18 +133,18 @@ The typeof operator returns the type of a variable or an expression.
  typeof(3+4) //returns "number"
 
  undefined
- In Javascript,a variable without a value ahs the value undefined.The type is also undefined.
+ In Javascript,a variable without a value has the value undefined.The type is also undefined.
 
  EXAMPLE
  let car; //value is undefined, type is undefined
- Any variable van be emptied by setting the value to undefined.The type will also be undefined.
+ Any variable can be emptied by setting the value to undefined.The type will also be undefined.
 
  EMPTY VALUES
  An empty value has nothin to do with undefined.
  An empty string has both a legal value and a type.
 
  EXAMPLE
- let car = " "; //the value is " ",the typeof is "string"
+ let car = " "; //the value is " ",the typeof is "string".
 
  JAVASCRIPT FUNCTIONS
  A Javascript function is a block of code designed to perform a particular task.
@@ -167,7 +170,7 @@ Function arguments are the values received by the function when it is invoked.
 Inside the function,the arguments(the parameters) behave as local variables.
 
 FUNCTION INVOCATION
-The code inside the function will executre when "something" invokes (calls) the function.
+The code inside the function will execute when "something" invokes (calls) the function.
 When an event occurs (when a user click a button).
 When it is invoked (called) from Javascript code
 Automatically (self invoked).
@@ -302,10 +305,10 @@ Object can also have methods.
 Methods are actions that can be performed on objects methods are store in properties as function definitions.
 
 PROPERTY PROPERTY NAME
-firstName John 
-lastName Doe
-age 50 
-eyecolor blue
+firstName: John; 
+lastName: Doe;
+age: 50; 
+eyecolor: blue;
 
 fullName function(){
 return this.firstName + " " + this.lastName;
@@ -343,6 +346,7 @@ EXAMPLE
 name=person.fullName();
 
 IF you access a method without the () parenthesis it will return the function definition:
+
 EXAMPLE
 name = person.fullName;
 
@@ -352,7 +356,7 @@ x=new string();
 y = new Number();
 z = new boolean();
 
-Avoid string,number and Boolean objects.They complicate your code and slwo down execution speed.
+Avoid string,number and Boolean objects.They complicate your code and slow down execution speed.
 
 JAVASCRIPT EVENTS
 HTML events are "things" that happen to HTML elements.
@@ -402,7 +406,7 @@ You can prevent events from being sent or being handled
 
 JAVASCRIPT STRINGS
 Strings are for storing texts
-STrings are written with quotes
+Strings are written with quotes
 You can use single or double quotes
 
 QUOTES INSIDE QUOTES
@@ -462,12 +466,12 @@ A safe way to break up a statement is after an operator:
 EXAMPLE
 document.getElementById("demo").innerHTML = "Hello Dolly!";
 
-A ssafe way to break up a string is by using string addition:
+A safe way to break up a string is by using string addition:
 EXAMPLE
 document.getElementById("demo").innerHTML = "Hello" + "Dolly!";
 
 TEMPLATE STRINGS
-Template are strings enclosed in backticks (`Thus is a template string`)
+Template are strings enclosed in backticks (`This is a template string`)
 Templates allow multiline strings:
 EXAMPLE
 let text = `The quick brown fox jumps over the lazy dog`;
@@ -499,28 +503,47 @@ let y = newString("John");
 Comparising two Javascript objects always returns false.
 
 JAVASCRIPT STRINGS METHODS 
-Basic Strings Methods
+Basic Strings Methods.
 Javascript strings are primitive and immutable:
 All strings methods produces a new string without altering the original strings.
-string length
-string charAt()
-string charCodeAt()
-string at()
-string [-]
-string slice()
-string substring() 
-string substr()
-string to UpperCase()
-string to LowerCase()
-string concat()
-string trim()
-string trimStart()
-string trimEnd()
-string padStart()
-string padEnd()
-string repeat()
-string replace()
-string replaceAll()
+
+1.string length //In JavaScript, the length property of a string returns the number of characters in the string.
+
+2.string charAt() //In JavaScript, the charAt() method of a string returns the character at a specified index in the string.
+
+3.string charCodeAt() // JavaScript, the charCodeAt() method of a string returns the Unicode value of the character at a specified index in the string.
+
+4.string at() //In JavaScript, the at() method of a string returns the character at a specified index in the string.
+
+5.string [-] //In JavaScript, you can use the square bracket notation to access the character at a specified index in a string.
+
+6.string slice() //In JavaScript, the slice() method of a string returns a new string that is a substring of the original string.
+
+7.string substring() //In JavaScript, the substring() method of a string returns a new string that is a substring of the original string.
+
+8.string substr() //In JavaScript, the substr() method of a string returns a new string that is a substring of the original string.
+
+9.string to UpperCase() //In JavaScript, the toUpperCase() method of a string converts all the characters in the string to uppercase.
+
+10.string to LowerCase() //In JavaScript, the toLowerCase() method of a string converts all the characters in the string to lowercase.
+
+11.string concat() //In JavaScript, the toLowerCase() method of a string converts all the characters in the string to lowercase.
+
+12.string trim() //In JavaScript, the trim() method of a string removes the whitespace characters from the beginning and end of the string.
+
+13.string trimStart() //In JavaScript, the trimStart() method of a string removes the whitespace characters from the beginning of the string.
+
+14.string trimEnd() //In JavaScript, the trimEnd() method of a string removes the whitespace characters from the end of the string.
+
+15.string padStart() //In JavaScript, the padStart() method of a string pads the string with a specified padding string so that the resulting string has a minimum length.
+
+16.string padEnd() //In JavaScript, the padEnd() method of a string pads the string with a specified padding string so that the resulting string has a minimum length.
+
+17.string repeat() //In JavaScript, the repeat() method of a string returns a new string that is the concatenation of the original string repeated a specified number of times.
+
+18.string replace() //In JavaScript, the replace() method of a string returns a new string with some or all matches of a specified search string replaced by a specified replacement string.
+
+19.string replaceAll() //n JavaScript, the replaceAll() method of a string returns a new string with all matches of a specified search string replaced by a specified replacement string.
 
 EXTRACTING STRING CHARACTERS
 There are 4 methods for extracting string characters:
@@ -857,7 +880,7 @@ Cats/Cats/Cats
 JAVASCRIPT STRING INCLUDE()
 The includes() method returns true if a sting contains a specified value.
 EXAMPLE
-Checkk if a string includes "World"
+Check if a string includes "World"
 let text = "Hello World,Welcome to the universe";
 text.include("World");
 true
