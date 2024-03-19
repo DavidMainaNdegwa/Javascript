@@ -6,16 +6,19 @@ Javascript variables are declared in four ways
   using const
 In the first example x,y,z are undeclared variables
 They are automatically declared when first used:
+
 EXAMPLE
 x=5
 y=6
 z=x+y;
+
 NOTE
 It is considered good programming practice to always declare variables before use.
 From the exmaple you can guess:
 x stores the value 5
 y stores the value 6
 z stores the value 11
+
 EXAMPLE USING VAR
 var x = 5;
 var y = 6;
@@ -30,6 +33,7 @@ EXAMPLE USING LET
 let x = 5;
 let y = 6;
 let Z = x + y;
+
 MIXED EXAMPLE
 const price1 = 5;
 const price2 = 6;
@@ -37,6 +41,7 @@ let total = price1 + price2;
 The two variables price1 and price2 are declared with the const keyword.
 These are constant values and cannot be changed
 the variable total can be changed.
+
 When to use var,let and const?
 1.Always declare variables
 2.Always use const if the value should not be changed
@@ -51,6 +56,7 @@ let y = 6;
 
 Just like in algebra,variables are used in expressions:
 let z=x+y;
+
 NOTE
 Variables are for containting strong values
   
@@ -73,15 +79,17 @@ This is different from algebra.The following does not make sense in algebra:
 x=x+5;
 In Javascript,however,it makes perfect sense :it assign the value of x + 5 to x(it calculates the value of x + 5 and puts the result into x.
 The value of x is incremented by 5.)
+
 NOTE
 The "equal to" operator is written like = = in Javascript
 
 JAVASCRIPT DATA TYPES
-Javascript variables can bold numbers like 100 and texts values like "John Doe".
+Javascript variables can hold numbers like 100 and texts values like "John Doe".
 In programming,text values are called text strings.
 Javascript can handle many types of data,but for now,just think to numbers and strings.
 Strings are written inside a double or single quotes.Numbers are written without quotes.
 If you put a number in quotes,it will be treated as a text string.
+
 EXAMPLE
 const pi=3.14;
 let person = "John Doe";
@@ -99,6 +107,7 @@ carName = "Volvo";
 You can also assign a value to the variable when you declare it.
 let carName = "Volvo";
 In the example below,we create a variable called carName and assign the value "Volvo" to it.Then we "output" the value inside an HTML paragraph with id="demo"
+
 EXAMPLE
 <p id = "demo"></p>
 <script>
@@ -106,22 +115,25 @@ let carName = "Volvo"
 document.getElementById("demo").innerHTML=carName;
 </script>
 NOTE
-It's a good Programming practice to declare all vvariables at the beginning of a script.
+It's a good Programming practice to declare all variables at the beginning of a script.
 
 ONE STATEMENT,MANY VARIABLES
 You can declare many variables in one statement with let and separate the variables by comma:
+
 EXAMPLE
 let person = "John Doe";
 carName = "Volvo",price = "200";
 value = undefined.
+
 In computer programs,variables are often declared without a value.
 The value can be something that has to be calculated,or something that will be provided later,like user input
 a  variable declared without a value will have the value undefined.
 The variable carName will have the value undefined after the execution of this statement.
 
 RE-DECLARING JAVASCRIPT VARIABLES
-If you re-declare Javascript decalre with var,it will not lose its value
+If you re-declare Javascript decalre with var,it will not lose its value.
 The variable carName will still have the value "Volvo" after the execution of these statements:
+
 NOTE
 You cannot re-declare a variable with let or const
 This will not work:
@@ -130,13 +142,16 @@ let carName;
 
 JAVASCRIPT ARITHMETIC
 As with algebra,you can do arithmetic with Javascript variables using operators like = and + 
+
 EXAMPLE
 let x = 5 + 2 + 3;
 You can also add strings,but strings will be concatenated:
+
 EXAMPLE
 let x = "John + " " + "Doe";
+
 NOTE
-If you put a number on quotes,the restr of the numbers will be treated as strings and concatenated.
+If you put a number on quotes,the rest of the numbers will be treated as strings and concatenated.
 
 JAVASCRIPT DOLLAR SIGN
 Since Javascript treats a dollar sign as a letter,identifiers containing $ are valid variable names:
@@ -147,6 +162,7 @@ let $myMoney = 5;
 
 JAVASCRIPT UNDERSCORE(_)
 Since JavaScipt treats underscore as a letter,identifiers containing _ are valid variable names.
+
 EXAMPLE
 let -lastName = "JohnSon";
 let _x h= 2;
@@ -154,42 +170,49 @@ let _100 = 5;
 
 JAVASCRIPT LET
 Variables declared with let have Block scope.
-Variables declared with let must be re-delcared before use
+Variables declared with let must be re-declared before use
 variables declared with let must be re-declared in the same scope
 
 BLOCK SCOPE
 ES6 introduced the two new JavaScript keywords:
 let and const
 these two keywords provided blockScope in JavaScript:
+
 EXAMPLE
 variables declared inside a {} block cannot be accessed from outside the block:
 {
 let x =2;
 }
 //x cannot be used here
+
 GLOBAL SCOPE
-variables declared with VAR always have global scope
-variables declared with var keyword cannot have block scope
+variables declared with VAR always have global scope.
+variables declared with var keyword cannot have block scope.
+
 EXAMPLE
-variables declared with VAR inside A {} block cannot be accessed from outside the block:
+variables declared with var inside a {} block cannot be accessed from outside the block:
 {
 X = 2;
 }
 // X can be used here
+
 CANNOT BE REDECLARED
 Variables defined with let cannot be declared
-You cannot accidentally and declare A variable declared with let
-With let you cannot do this
-let X = “ John doe”; 
-let X = 0;
-variables defined with VAR can be redeclared
-with VAR you can do this:
-var = " John Doe";
+You cannot accidentally and declare a variable declared with let.
+
+With let you cannot do this:
+let x = “ John doe”; 
+let x = 0;
+
+variables defined with var can be redeclared
+with var you can do this:
+var x = " John Doe";
 var x = 0;
 
 REDECLARING VARIABLES
-Re-declaring a variable using the var keyword 
-Redeclaring A variable inside the block will also declare the variable outside the block
+Re-declaring a variable using the var keyword.
+Redeclaring a variable inside the block will also declare the variable outside the block.
+
 EXAMPLE
 var x = 10;
 //Here var is 10
@@ -197,8 +220,10 @@ var x = 10;
 var x = 2;
 }
 //Here x is 2
+
 re-declare a variable inside a block can also solve this problem.
-Redeclaring A variable inside a block will not redeclare the variable outside the block:
+Redeclaring a variable inside a block will not redeclare the variable outside the block:
+
 EXAMPLE
 let x = 10;
 //Here x is 10;
@@ -213,27 +238,35 @@ let and const have block scope
 let and const cannot be redeclared
 let and const must be declared before use
 lead and const are not hoisted
+
 WHAT IS NOT GOOD
 var does notes have to be declared
 var is hoisted
 var binds to this
+
 REDECLARING
-Redecalring a Javascript variable wit var is allowed anywhere in the program:
+Redeclaring a Javascript variable wit var is allowed anywhere in the program:
+
 EXAMPLE
 var x = 2;
 //Now x is 2
 var x = 3;
 //Now x is 3 
+
 With let redeclaring a variable in the same block is not allowed.
 EXAMPLE
+{
 var x = 2; // allowed
-var x = 3; //Not allowed
+var x = 3; //allowed
+}
 
 {
 let x = 2; //allowed
 let x = 3; //not allowed
 }
-Redecalring a variabel with let in anaother block is allowed:
+
+Redeclaring a variable with let in another block is allowed:
+
 EXAMPLE
 let x = 2; //Allowed 
 
@@ -248,6 +281,7 @@ let x = 4; //Allowed
 LET HOISTING
 variables defined with var are hoisted to the top end can be initialized at anytime.
 Meaning: you can use the variable before it's declared.
+
 EXAMPLE
 This is OK:
 carName = "Volvo";
@@ -258,7 +292,7 @@ variables defined with const cannot be redeclared
 variables defined with const cannot be reassigned
 variables defined with const have block scope
 
-CANNOT BE ASSIGNED 
+CANNOT BE REASSIGNED 
 a variable defined with the const keyword cannot be reassigned
 EXAMPLE
 const PI = 3.1415;
@@ -274,14 +308,15 @@ const PI;
 PI = 3.1415;
 
 WHEN TO USE JAVASCRIPT CONST
-always declare with CNS T when you know that the value should not be changed
+always declare with CONST when you know that the value should not be changed
 use CONST when you declare:
 a new array
 a new object
 a new function
 a new Reg Exp
+
 CONSTANT OBJECTS AND ARRAYS
-The keyword construct is a little misleading.
+The keyword const is a little misleading.
 It does define a constant value. it defines a constant reference to a value.
 Because of this you cannot:
 reassign a constant value
@@ -309,18 +344,20 @@ cars = ["Toyota","Volvo","BMW"]; //Error
 
 CONSTANT OBJECTS
 You can change the properties of a constant object:
+
 EXAMPLE
 //You can create a const object.
 const car = {type: "Fiat",model:"500",color:"white"};
-//You can change the a property:
+//You can change a property:
 car.color = "red";
 //You can add a property:
 car.owner = "Johnson";
 But,you can NOT reassign the oject:
 
 BLOCK SCOPE
-Declaring a variable with const is similar to leet when it comes to Block Scope. 
+Declaring a variable with const is similar to let when it comes to Block Scope. 
 The x declared in the scope,In this example,its not the same as the x declared outside the block:
+
 EXAMPLE
 const x = 10;
 //Here x is 10
@@ -331,14 +368,17 @@ const x = 2;
 }
 
 //Here x is 10
+
 REDECLARING
 Redeclaring a Javscript var is allowed anywhere in a Porgram:
+
 EXAMPLE
 var x = 2;
 var x = 3;
 x = 4;
 
 Redeclaring an exisitng var or let variable to const in the same scrop is not allowed:
+
 EXAMPLE
 var x = 2;//Allowed
 const x = 2;  //not allowed
@@ -353,21 +393,21 @@ const x = 2; //allowed
 const x = 2; //not allowed
 }
 
--Reassing an exisigning const variable in the same scope is not allowed:
-Reassigning a variable const in another scope or in another block is allowed:
-EXAMPLE
-const x = 2; //allowed
+-Reassigning an existing const variable in the same scope is not allowed:
+-Reassigning a variable const in another scope or in another block is allowed:
 
+EXAMPLE
 {
+const x = 2; //allowed
 const x = 3; //not Allowed
 }
 
 {
-const x = 4; ///allowed
+const x = 4; //allowed
 }
 
 HOISTING
-Variables defined with car are hosited to the top and can be initialized at any time.
+Variables defined with var are hosited to the top and can be initialized at any time.
 Meaning:You can use the variable before it is declared.
 
 EXAMPLE
@@ -377,7 +417,8 @@ var carName;
 
 JAVASCRIPT OPERATORS
 The addition operator + adds numbers:
-The assiignment operator = assigns a calue to a variable
+The assignment operator = assigns a value to a variable.
+
 EXAMPLE
 let x = 10;
 
@@ -407,7 +448,7 @@ Javascript Operators are used to perform arithmetic on numbers:
 -- Decrement
 
 JAVASCRIPT ASSIGNMENT OPERATORS
-Assignment operators assign values to Javscript variables.
+Assignment operators assign values to Javascript variables.
 The addition assignment operator(+=) adds a value to a variable.
 let x = 10;
 x += 5;
@@ -439,6 +480,7 @@ let text2 = "B";
 let result = text1 < text2;
 
 Note that strings are compared alphabetically:
+
 EXAMPLE
 let text1 = "20";
 let text2 = "5";
@@ -452,13 +494,14 @@ let text2 = "Doe";
 let text3 = text1 + " " + text2;
 
 the += assignment operator can also be used to add(contantenate)strings:
+
 EXAMPLE
 let text1 = "What a very";
 text1 += " nice day";
 The result of text1 will be:
 What a very nice day
 
-ADDING STRINGS AND NUMBMERS
+ADDING STRINGS AND NUMBERS
 Adding two numbers,will return the sum,but adding a number and a string will return a string:
 EXAMPLE
 let x = 5 + 5;
@@ -478,8 +521,45 @@ JAVASCRIPT LOGICAL OPERATORS
 ! logical not
 
 JAVASCRIPT TYPE OPERATORS
-typeof- Returns the type a variable.
-instanceof- Returns true if an object is an instance of an object type.
+1.typeof- Returns the type a variable.
+EXAMPLE
+const x = 5;
+console.log(typeof x); // "number"
+
+const y = "hello";
+console.log(typeof y); // "string"
+
+const z = true;
+console.log(typeof z); // "boolean"
+
+const a = null;
+console.log(typeof a); // "object" (this is a quirk in JavaScript)
+
+const b = undefined;
+console.log(typeof b); // "undefined"
+
+const c = { name: "John Doe" };
+console.log(typeof c); // "object"
+
+const d = function() {};
+console.log(typeof d); // "function"
+
+2.instanceof- Returns true if an object is an instance of an object type.
+EXAMPLE
+const car = { brand: "Toyota", model: "Corolla" };
+console.log(car instanceof Object); // true
+
+const person = { name: "John Doe", age: 30 };
+console.log(person instanceof Object); // true
+
+const number = 5;
+console.log(number instanceof Number); // false
+
+const string = "hello";
+console.log(string instanceof String); // false
+
+const boolean = true;
+console.log(boolean instanceof Boolean); // false
 
 JAVASCRIPT ARITHMETIC
 JAVASCRIPT ARITHMETIC OPERATORS
@@ -493,7 +573,7 @@ EXAMPLE
 let x = 5;
 let z = Math.pow(x,2);
 
-OPERATOR PREDENCE
+OPERATOR PRECEDENCE
 Operator precedence describes the order in which operations are performed in an arithmetic expression.
 EXAMPLE
 let x = 100 + 50 * 3;
@@ -608,8 +688,9 @@ The bitwise XOR Assignment operator does a bitwise XOR operation on two operands
 
 Bitwise XOR Assignment
 EXAMPLE
-let x = 10;
-x^=5; 
+let x = 10; // binary: 1010
+x^=5; // binary: 0101, result: 5
+console.log(x); // 5
 
 The &&= operator
 The logical AND Assignment operator is used between two values.
@@ -618,22 +699,25 @@ If the first value is true,the second value is assigned.
 EXAMPLE
 let x = 10;
 x&&=5;
-value of x:5
+console.log(x); // 10
 
 The || Operator
-The logical or assignmetn operator is used between two values.
+The logical OR assignment operator is used between two values.
 If the first value is false,the second value is assigned.
 EXAMPLE
-value of x:5;
+let x = 10;
+x ||= 5;
+console.log(x); // 10
 
 The ??= Operator
 The nullish coalescing assignment operator is used between two values.
 If the first value is undefined or null,the second value is assigned.
 
 Nullish Coalescing Assignment Example.
-let x;
-x??=5;
-5
+let x = null;
+x ??= 5;
+console.log(x); // 5
+
 
 
 
