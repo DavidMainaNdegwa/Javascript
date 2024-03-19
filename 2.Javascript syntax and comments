@@ -7,21 +7,26 @@ x=5;
 y=6;
 let z=x+y;
 z=11
+
 JAVASCRIPT VALUES
--Javascrpt syntax defines tow types ogf values:
+-Javascrpt syntax defines how types of values:
 .Fixed values
 .Variable values.
+
 TEXTUAL DATA(STRING)
 "I love Javascript"
 "Javascript is fun"
 cosole.log("I love Javscript")
 "Javacript is fun"
 console.log("I love Javascript")
+
 INTEGERS $ FLOATS(NUMBERS)
 Integer is a whole number and float is a decimal number.
+
 EXAMPLE
 console.log(8)
 console.log(80.5)
+
 NOTE
 I have not used quotation marks inside the parenthesis because it will be considered a string.
 
@@ -44,7 +49,8 @@ console.log(name);
 David
 John
 
-We aslo assign one value of a variable to another
+We aslo assign one value of a variable to another.
+
 EXAMPLE
 let name = 'David';
 let surname = 'Perez';
@@ -63,7 +69,7 @@ City is Nairobi
 //concatenation with vairables anf strings using the plus(+)
 
 let city='Nairobi';
-console.log('city:&{city}');
+console.log(`city:${city}`);
 
 EXAMPLE
 let city = 'Nairobi';
@@ -80,9 +86,10 @@ City:Nairobi,KFC Location:10
 VARIABLE NAMING CONVENTIONS
 -When we use good descriptive variable names it become easier to understood the code to make variable names descriptive
 we may need to use names having more than one word.We will follow the camel case format while giving names to our variables.
--In camel case the first word will be of a small letters and the first letter of the stand word will be of capital letters.
+-In camel case the first word will be of a small letters and the first letter of the second word will be of capital letters.
 
 Fixed values are called literals.variable values are called variables.
+
 JAVASCRIPT LITERALS
 -The top most important syntax rules for fixed values are:
 1.Numbers are written with or without decimals:
