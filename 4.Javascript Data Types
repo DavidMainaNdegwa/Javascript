@@ -167,15 +167,16 @@ Function arguments are the values received by the function when it is invoked.
 Inside the function,the arguments(the parameters) behave as local variables.
 
 FUNCTION INVOCATION
-The cpde inside the functioon will executre when "something" invokes (calls) the function.
+The code inside the function will executre when "something" invokes (calls) the function.
 When an event occurs (when a user click a button).
 When it is invoked (called) from Javascript code
 Automatically (self invoked).
 
 FUNCTION RETURN
-wHEN Javascript reaches a return statement,the fucntion will stop excuting.
-if the function was invoked from a statement,Javascript will "return" the execude the code after the invoking ststement.
+When Javascript reaches a return statement,the fucntion will stop excuting.
+if the function was invoked from a statement,Javascript will "return" the execude the code after the invoking statement.
 Functions often compute a return value.The return value is "returned" back to the "caller":
+
 EXAMPLE
 Calculate the product of two numbers,mand return the result:
 //function is called,the return value will end up in x.
@@ -219,12 +220,13 @@ As you see from the example above,toCelcius refers to the function object and to
 FUNCTIONS USED AS VARIABLE VALUES
 let x = toCelcius(77);
 let text = "The temperature is " + * + "Celcius";
-Instead,of USing a variable to store the return value of a function you can use the function directly as a variable value:
+Instead,of using a variable to store the return value of a function you can use the function directly as a variable value:
 let text = "The temperature is" + toCelcius(77) + "Celcius";
 
 LOCAL VARIABLES
 Variables declared within a Javascript function,become LOCAL to the function.
 Local variables can only be accessed from within the function:
+
 EXAMPLE
 //code here can NOT use carName
 function myFunction(){
@@ -243,7 +245,7 @@ All cars have the same methods but the methods are performed at different times.
 
 JAVASCRIPT OBJECTS
 You have already learned that Javascript variables are containers for data values
-The code assigns a simple value(Flat) to a variable named car:
+The code assigns a simple value(Fiat) to a variable named car:
 let car = " Fiat";
 
 Objects are variables too but objcects contain many values.
@@ -255,9 +257,11 @@ It is a common practice to declare objects with the const keyword.
 
 OBJECT DEFINITION
 You define (and create) a Javascript object with an object literal:
+
 EXMAPLE
-const person ={firstName:"John",lastName:"Doe",age:50,eyecolor:"blue"
+const person ={firstName:"John",lastName:"Doe",age:50,eyecolor:"blue"};
 white spaces and line breaks are not important.An object definition can span multiple lines:
+
 EXAMPLE
 const person = {
 firstName:"John";
@@ -276,16 +280,19 @@ eyecolor:blue
 ACCESSING OBJECT PROPERTIES
 You can access object properties in two ways:
 objectName.propertyName or objectName["propertyName"]
+
 EXAMPLE
 <script>
 //create an object
-firstName = "John"
-lastName = "Doe"
-id = 5566
+const person = {
+firstName: "John",
+lastName:"Doe",
+id: 5566,
 };
 
 //Display some data from the objects:
-document.getElementById("demo").innerHTML = person["firstName"] + " " + person["lastName"];
+const demoElement = document.getElementById("demo");
+demoElement.innerHTML = person["firstName"] + " " + person["lastName"];
 </script>
 
 Javascript objects are containers for named values called properties.
@@ -400,8 +407,9 @@ You can use single or double quotes
 
 QUOTES INSIDE QUOTES
 You can use quotes inside a string as long as they dont match the quotes surronding the string:
+
 EXAMPLE
-let answer1 = "it's alrigth"
+let answer1 = "it's alright"
 let answer2 = "He is called 'Johnny'";
 let naswer3 = "He is called "Johnny"';
 
@@ -409,7 +417,8 @@ TEMPLATE STRINGS
 let text = 'He's often called "Johnny"';
 
 STIRNG LENGTH
-To find the length of a string ise the built in length property:
+To find the length of a string use the built in length property:
+
 EXAMPLE
 let text = ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let length = "text.length";
@@ -432,7 +441,7 @@ EXAMPLE
 \" inserts a double quote in a string:
 let text = "We are this so-called\"vikings"\"from the north";
 
-\' inserts a single quoute in a string:
+\' inserts a single quote in a string:
 let text = "It's alright";
 let text = 'it\'s alright';
 
