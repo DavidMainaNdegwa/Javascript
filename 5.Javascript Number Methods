@@ -1,11 +1,12 @@
 These number methods can be used on all Javascript numbers:
+
 toString() Returns a number as a string
 toExpontential() Returns a number written in exponential notation 
 toFixed() Returns a number written with a number of decimals
 toPrecision() Returns a number written with a specified length
 ValueOf() Returns a number as a number.
 
-The toString() method
+1.The toString() method
 The toString() method returns a number as a string.
 All number methods can be used on any type of numbers(literals,variables,or expressions):
 
@@ -20,8 +21,8 @@ OUTPUT
 123
 123
 
-THETOEXPONENTIAL()METHOD
-toExpontential returns a string,with a number rounded and written using expotential notation.
+2.The toExpotential()Method
+toExpontential() returns a string,with a number rounded and written using expotential notation.
 A parameter defines the number of characters behind the decimal point:
 
 EXAMPLE
@@ -37,7 +38,7 @@ OUTPUT
 9.656000e + 0
 The parameter is optional if you dont specify it,Javascript will not round the number.
 
-The toFixed()method
+3.The toFixed()method
 toFixed() returns a string with the number written a specified number of decimal.
 
 EXAMPLE
@@ -55,27 +56,31 @@ OUTPUT
 
 toFixed(2) is perfect for working with money.
 
-The tOPrecision() Method
+3.The toPrecision() Method
 toPrecision() returns a string,with a number written with a specified length:
+
 EXAMPLE
 let x = 9.656;
 x.toPrecision();
 x.toPrecision(2);
 x.toPrecision(4);
 x.toPrecision(6);
+
 OUTPUT
 9.656
 9.7
 9.656
 9.65600
 
-The valueOf()Method
+4.The valueOf()Method
 valueOf() returns a number as a number
+
 EXAMPLE
-let x = 128;
+let x = 123;
 x.valueOf();
 (123).valueOf();
 (100+23).valueOf();
+
 OUTPUT
 123
 123
@@ -86,7 +91,7 @@ The valueOf() method is used internally in Javascript to convert number objects 
 There is no reason to use it in your code.
 All Javascript data types have a valueOf() and a toString() method.
 
-CONVERING VARIABLES TO NUMBER
+CONVERTING VARIABLES TO NUMBER
 There are 3 Javascript methods that can be used to convert a variable to a number.
 Number() Returns a number converted from its argument
 parseFloat()Parses its argument and returns a floating point number
@@ -95,7 +100,7 @@ parseInt()Parses its argument and returns a whole number
 The methods above are not number methods.They are global Javascript methods.
 
 THE NUMBER() METHOD
-The number()method can be used to convert Javascript vairables to numbers.
+The number()method can be used to convert Javascript variables to numbers.
 
 EXAMPLE
 Number(true);
@@ -134,22 +139,27 @@ The Date() method returns the number of millisecond since 1.1.1970
 The number of millisecond between 1970-01-02 and 1970-01-02
 
 The number of millisecond since 1970-1-02 and 1970-01-01 is 86400000:
+
 EXAMPLE
 Number(new Date("1970-01-02"))
+
 OUTPUT
 86400000
+
 EXAMPLE
 Number(new Date ("2017-09-30"))
+
 OUTPUT
 1506729600000
 
 The parseInt() Method
-parseInt() parses a string and returns strinng and returns a whole number.Spaces are allowed.Only the first number is returned.
+parseInt() parses a string and returns string and returns a whole number.Spaces are allowed.Only the first number is returned.
+
 EXAMPLE
 parseInt("-10");
 parseInt("-10.33");
 parseInt("10");
-parseInt(""10.33);
+parseInt("10.33");
 parseImt("10 20 30");
 parseInt("10 years");
 parseInt("years 10");
@@ -163,13 +173,15 @@ OUTPUT
 NaN
 
 The parseFloat()Method
-parseFloat()parses a string and returns a number.Spaces are allowed Only  the first number is returned::
+parseFloat()parses a string and returns a number.Spaces are allowed only the first number is returned:
+
 EXAMPLE
 parseFloat("10");
 parseFloat("10.33");
 parseFloat("10 20 30");
 parseFloat("10 years");
 parseIntFloat("years 10");
+
 OUTPUT
 10
 10.33
@@ -179,6 +191,7 @@ NaN
 
 Number Object Methods
 These object methods belong to the Number object:
+
 Number.isInteger()-Return true if the argument is an integer.
 Number.isSafeInteger()-Returns true if the argument is a safe intger
 Number.parseFloat()-Converts a string to a number.
@@ -193,6 +206,7 @@ TypeErrorX.isInteger is not a function.
 
 THE Number.isInteger()Method
 The number.isInteger() method returns true if the argument is an integer
+
 EXAMPLE
 Number.isInteger(10);
 Number.isInteger(10.5);
@@ -200,25 +214,28 @@ OUTPUT
 true
 false
 
-TThe Number.isSafeIntegr()Method
-A safe integer is an integer that can be exactly represented as a double precision  number.
+TThe Number.isSafeInteger()Method
+A safe integer is an integer that can be exactly represented as a double precision number.
 The Number.isSafeInteger() method returns true if the argument is a safe integer.
+
 EXAMPLE
 Number.isSafeInteger(10);
 Number.isSafeInteger(1 2 3 4 5 6 7 8 9 0);
 OUTPUT
-ture
+true
 false
 
 The Number.parseFloat()Method
 Number.parseFloat() parses a string and returns a number
 Spaces are allowed only the first number is returned.
+
 EXAMPLE
 Number.parseFloat("10");
 Number.parseFloat("10.33");
 Number.parseFloat("10 20 30");
 Number.parseFloat("10 years");
 Number.parseFloat("years 10");
+
 OUTPUT
 10
 10.33
@@ -234,12 +251,14 @@ The purpose is modularization of globals(to make it easier to use the same Javas
 THE Number.parseInt() Method
 Number.parseInt() parses a string and returns a whole number.
 Spaces are allowed.Only the first number is returned:
+
 EXAMPLE
 Number.parseInt("-10");
 Number.parseInt("-10.33");
 Number.parseInt("10");
 Number.parseInt("10 20 30");
 Number.parseInt("years 10");
+
 OUTPUT
 -10
 -10
@@ -261,53 +280,66 @@ NaN - A "Not -a- number" value
 
 JAVASCRIPT EPLISON
 Number.EPLISON is the difference between the smallest floating point number greater than 1 and 1
+
 EXAMPLE
 let x = Number.EPLISON;
+
 OUTPUT
 2.2044609250313e.16
 
 JAVASCRIPT MAX-VALUE
-Number.MAX-VALUE is a constant representing the largest possible number in Javascript
+Number.MAX-VALUE is a constant representing the largest possible number in Javascript.
+
 EXAMPLE
 let x = Number.MAX - VALUE;
+
 OUTPUT
 The largest possible number in Javascript is: 1.7976931348623157e+308
 
 Number Properties cannot be used on Variables
 Number properties belong to the Javascript
+
 NUMBER OBJECT
 These properties can be only accessed as NUMBER.MAX-VALUE:
 using x.MAX-VALUE where x is a variable or a value,will return undefined:
+
 EXAMPLE
 let x = 6;
 X.MAX-VALUE;
-OUTOUT
+
+OUTPUT
 undefined
 
 JAVASCRIPT MIN-VALUE
 Number.MIN-VALUE is a constant representing the lowest possible number in Javscript:
+
 EXAMPLE
 let x = Number.MIN-VALUE;
+
 OUTPUT
 5e-324
 
 JAVASCRIPT MAX-SAFE-INTEGER
 Number.MAX-SAFE-INTEGER represents the maximum safe integer in Javascript.
 Number.MAX-SAFE-INTEGER is (2^53-1)
+
 EXAMPLE
 let x = Number.MAX_SAFE_INTEGER;
+
 OUTPUT
 9007199254740991
 
 JAVASCRIPT MIN-SAFE-INTEGER
 Number.MIN-SAFE-INTEGER represents the minimum safe integer in Javascript
 Number.MIN-SAFE-INTEGER is (2^53-1)
+
 EXAMPLE
 let x = Number.MIN-SAFE-INTEGER;
+
 OUTPUT
 -9007199254740991
 
-JAVASCRIPT POSITIVE - INFINITY
+JAVASCRIPT POSITIVE_INFINITY
 EXAMPLE
 let x = Number.POSITIVE_INFINITY;
 
@@ -348,7 +380,7 @@ const array-name = [item1,item2,...]
 It is a common practice to declare arrays with the const keyword
 You can also create an array and then provide the elements:
 EXAMPLE
-cosnt cars = [];
+const cars = [];
 cars[0] = "Saab";
 cars[1] = "Volvo";
 cars[2] = "BMW";
@@ -441,7 +473,7 @@ let fruits = fruits[fruits.length -1];
 Mango
 
 LOOPING ARRAY ELEMETNS
-One way to loop through an array is uysing a for loop:
+One way to loop through an array is using a for loop:
 EXAMPLE
 const furits =["Banana","Orange","Apple","Mango"];
 let flen = fruits.length;
@@ -483,7 +515,7 @@ fruits.push("Lemon");
 
 New element can also be added to an array using the length property
 EXAMPLE
-const furits = ["Banana","Orange","Apple","Mango"];
+const fruits = ["Banana","Orange","Apple","Mango"];
 furits[fruits.length] = "Lemon"; //Adds "Lemon" to fruits
 
 WARNING!
@@ -503,7 +535,7 @@ Lemon
 ASSOCIATIVE ARRAYS
 Many programming languages support arrays with named indexes
 Arrays with named indexes are called associative arrays (or lashes)
-Javascript does not supprot arrays with named indexes
+Javascript does not support arrays with named indexes
 In Javascript,arrays alwasy use numbered indexes
 
 EXAMPLE
@@ -516,7 +548,7 @@ person.length; //will return 3
 person[0]; //will return "John"
 
 WARNING!!
-If you use namd indexes Javascript will redefine the array to an object.
+If you use named indexes Javascript will redefine the array to an object.
 After that,some array methods and properties will produce incorrect results
 EXAMPLE
 const person = [];
@@ -528,10 +560,10 @@ person[0]; //will return undefined
 undefined 0 
 
 THE DIFFERENCE BETWEEN ARRAYS AND OBJECTS
-In Javascriot,arrays use numbered indexes.
+In Javascript,arrays use numbered indexes.
 In Javascript,objects use named indexes.
 
-Arrays are a special kind of objectrs with numbered indexes
+Arrays are a special kind of objects with numbered indexes
 
 WHEN TO USE ARRAYS
 When to use objects
@@ -568,20 +600,21 @@ undefined
 
 HOW TO RECOGNIZE AN ARRAY
 A common qwuestion is:How do i know if a varible is an Array?
-The problem is tjht the Javascript operator typeof returns "objects":
+The problem is the Javascript operator typeof returns "objects":
 const fruits = ["Banana","Orange","Apple"];
 let type=typeof frutis;
 
-The type operatoe returns objects because a Javascript array is an object.
+The typeof operator returns objects because a Javascript array is an object.
 
 Solution 1:
 To solve this problem ECMA Script 5 (Javasript 2009) defned a new method Array.isArray();
 const fruits = ["Banana",""orange","Apple"];
-document.getElementById("demo").innerHTML = rray.isArray(fruits);
+document.getElementById("demo").innerHTML = Array.isArray(fruits);
 
 true
+
 Solution 2
-The instanceOf operator returns true if anobject is created by a given constructor:
+The instanceOf operator returns true if another object is created by a given constructor:
 
 const fruits = ["Banana","Orange","Apple"];
 fruits instanceof Array;
@@ -603,14 +636,14 @@ Array splice()
 Array toSpliced()
 Array slice()
 
-Javascript Array length
+1.Javascript Array length
 The length property returns the length(size) of an array:
 Example
 const fruits = ["Banana","Orange","Apple","Mango"]
 lt.size=fruits.length;
 4
 
-Javascript Array toString()
+2.Javascript Array toString()
 The Javscript method toString converts an array to string of (comma separated)
 EXAMPLE
 const fruits = ["Banana","Orange","Apple","Mango"]
@@ -618,18 +651,18 @@ document.getElementById("demo").innerHTML=fruits.toString():
 Result:
 Banana,Orange,Apple,Mango
 
-Javascript Array at()
+3.Javascript Array at()
 Get the third element of fruits using at()
 const fruits = ["Banana","Orange","Apple","Mango"];
 let fruits = fruits.at(2);
 Apple
 
-Get the trid element using [];
+Get the third element using [];
 const fruits = ["Banana","Orange","Apple","Mango"];
 let fruits = fruits[2];
 Apple
 
-Javascript Array joint()
+4.Javascript Array join()
 The join() method also joins all array elements into a string
 It behaves just like toString() but in addition you can specifyth eseparator:
 Example
@@ -642,7 +675,8 @@ Popping and Pushing
 When you work wih arrays it is easy to remove elements and add new elements.
 This is what popping anf pushing is
 Popping items out of an array or pushing items into an arry;
-Javascript Array pop()
+
+5.Javascript Array pop()
 The pop() method removes the lat element from an array:
 Example
 const fruits = ["Banana","Orange","Apple","Mango"];
@@ -655,7 +689,7 @@ const fruits = ["Banana","Orange","Apple","Mango"];
 let fruits = fruits.pop()
 Mango
 
-Javascript Array Push
+7.Javascript Array Push
 The push() method adds a new element to an array (at the end):
 Example
 const fruits = ["Banana","Orange","Apple","Mango"];
@@ -670,14 +704,14 @@ let length = fruits.psuh("Kiwi");
 Shifting Elements
 Shifting is equivalent to popping but working on the first element instead of the last 
 
-Javascript Arrays Shift
+8.Javascript Arrays Shift
 The shift() method removes the first array element and "shifts" all other element to a lower elements
 Example
 const fruits = ["Banana","Orange","Apple","Mango"];
 let fruit = furit.shift();
 Banana,Orange,Apple,Mango
 
-Javascript Array unshifted()
+9.Javascript Array unshifted()
 The unshift() method adds a new element to an array (at the beginning) and "Unshifts" older elements:
 Example
 const fruits = ["Banana","Orange","Apple","Mango"];
@@ -702,7 +736,7 @@ const fruits =  ["Banana","Orange","Apple","Mango"];
 fruits[0] = "Kiwi";
 Kiwi,Banana,Orange,Apple,Mango
 
-Javascript Array length
+10.Javascript Array length
 The length poperty provides an easy way to append a new element to an array:
 Example
 const fruits = ["Banana","Orange","Apple","Mango"];
@@ -721,8 +755,9 @@ delete fruits[0];
 Merging Arrays (concatenating)
 In programming languages,concatenation means joining strings end-to-end
 Contantenation "show" and "ball" gives "snowball"
-Contantenatingarrays means joining arrays end-to-end.
-Javscript Array Concat()
+Contantenating arrays means joining arrays end-to-end.
+
+11.Javscript Array Concat()
 The concat() method creates a new array by merging exisitng arrays.
 Example
 const myGIrls = ["Cecilie","Lone"];
@@ -735,19 +770,23 @@ The concat() method does not change the existing arrays.It always returns a new 
 The concat() method can take any number of array arguments.
 
 EXAMPLE(Merging Three Arrays)
+
 const arr1 = ["cecilie","Lone"];
 const arr2 = ["Emil","Tobias",Linus"];
 const arr3=["Robin","Morgan"];
 const mychildren = arr1.concat(arr2,arr3);
 Cecilie,Lone,Emil,Tobias,Linus,RObin,Morgan
-The concat() method ca aslo take strings as arguments:
+
+The concat() method can aslo take strings as arguments:
+
 Example (Merging an Array with values)
 const arr1 = ["Emil","Tobias","Linus"];
 const mycHildren = arr1.concat("Peter");
 Emil,Tobias,Linus,Peter
 
-Array copyWithin()
+12.Array copyWithin()
 The copyWithin() method copies array elements to another position in an array 
+
 EXAMPLE
 Copy to index2,all elements from index 0:
 const furits = ["Banana","Orange","Apple","Mango"];
@@ -768,31 +807,33 @@ Flattening an Array
 Flattening an array is the process of reducing the dimensionalioty of an array
 Flattening is useful when you want to conert a multi-dimensional array into one-dimensional array
 
-Javsascript Array flat()
+13.Javsascript Array flat()
 The flat() method  creates a new array with sub-array elements concatenated to a specified depth.
 EXAMPLE
 const newArr = myArr = flat();
 123456
 
-Spilicing and Splicing 
+Splicing and Slicing 
 Arrays
 The splice() method adds new items to an array
-THE slice() method slices ouyt a piece of an array
+THE slice() method slices out a piece of an array
+
 EXAMPLE
 const.fruits = ["Banana","Orange","Apple","Mango"];
 fruits.splice(2,0,"Lemon","Kiwi");
 Banana,Orange,Lemon,Kiwi,Apple,Mango
 
-The first paramter(2) defines the psoition where new elements should be  added (spliced,in)
-The second paramter (0) defines how many elements shuld be removed
-The rest of the parameters ("Lemon","Kiwi") define the new elements to be added
+The first paramter(2) defines the position where new elements should be added (spliced,in).
+The second parameter (0) defines how many elements should be removed.
+The rest of the parameters ("Lemon","Kiwi") define the new elements to be added.
 The splice() method returns an array with the deleted items:
+
 Example
 const fruits = ["Banana","Orange","Apple","Mango"];
 fruits.splice(2,2,"Lemon","Kiwi");
 Banana,Orange,Lemon,Kiwi,Apple,MAngo
 
-USING SPLICE() TO REMOVE ELEMENT
+14.USING SPLICE() TO REMOVE ELEMENT
 With clever paramter setting you can use splice() to remove elements without leaving "holes" in the array:
 EXAMPLE
 const fruits = ["Banana","Orange","Apple","Mango"];
@@ -803,7 +844,7 @@ The frist parameter (0) defines the position where new elements should be added 
 The second parameter (1) defines how many elements should be removed.
 The rest of the parameter are ommitted.No new elements will be added.
 
-Javscript Array toSpliced()
+15.Javascript Array toSpliced()
 The difference betweeen the new toSpliced() method and the old splice() method is that the new method is that the new
 creates a new array keeping the original array unchanged while the old method altered the original array.
 
@@ -812,10 +853,11 @@ const months = ["Jan","Feb","Mar","Apr"];
 const spliced = moths.toSpliced(0,1);
 Feb,Mar,Apr
 
-Javscript Array Slice()
-The slice() ,ethod slices out a piece of an array to a new array:
+16.Javascript Array Slice()
+The slice() method slices out a piece of an array to a new array:
+
 EXAMPLE
-Sklice out a partof an array starting from array element1("orange"):
+Slice out a part of an array starting from array element1("orange"):
 const fruits["Banana","Orange","Lemon","Apple","Mango"];
 const citrus = fruits,slice(1);
 Orange,Lemon,Apple,Mango
@@ -830,7 +872,7 @@ cost fruits=["Banana","Orange","Apple","Mango"];
 const citrus = fruits.slice(3);
 Apple,Lemon
 
-The slice() methods can taketwo arguments like slice(1,3)
+The slice() methods can take two arguments like slice(1,3)
 The method then selects elements from the start argument and up to (but not including) the end argument.
 
 EXAMPLE
@@ -838,15 +880,17 @@ const fruits = ["Banana","Orange","Lemon","Apple","Mango"];
 const citrus = fruits.slice(1,3);
 Orange,Lemon
 
-If the end argumebnt is ommitted like in the first examples the slice() method slices out the rest of the array
+If the end argument is ommitted like in the first examples the slice() method slices out the rest of the array.
+
 EXAMPLE
 const fruits = ["Banana","Orange","Lemon","Apple","Mango"];
 lemon,Apple,Mango
 
-AUTOMATIC toString()
-Javscript automatically converts an array to a comma separated string when a primitive value is expected.
+16.Automatic toString()
+Javascript automatically converts an array to a comma separated string when a primitive value is expected.
 This is always the case when you try to output an array.
 These two examples will produce the same result:
+
 EXAMPLE
 const fruits = ["Banana","Orange","Apple","Mango"];
 document.getElementById("demo").innerHTML = fruits.toString();
