@@ -825,7 +825,8 @@ the search starts at position 15 and searches to the beginning of the string.
 JAVASCRIPT STRING SEARCH()
 The search() method searches a string or a regular expression and returns to the position of the match:
 EXAMPLE
-let text = "Please locate where 'locate' occurs!"text.search(/locate/);
+let text = "Please locate where 'locate' occurs!";
+text.search(/locate/);
 
 Did You Notice?
 The two methods,indexOf() and search() are,equal?
@@ -838,22 +839,21 @@ The indexOf() method cannot take powerful serach values (regular expressions)
 JAVASCRIPT STRING MATCH()
 The match() method returns an array containing the results of matching a string against a string (or a regular expression)
 EXAMPLE
-Perform a search for "an" 
+Perform a search for "ain" 
 let text ="The vain in SPAIN stays mainly in the plain";
 text.match("ain");
 
-Perform a search for "ain":
-let text = "The rain in SPAIN stays mainly in the plain";
-text.match(/ain/);
-
-Perform a global search for "ain":
 let text = "The rain in SPAIN stays mainly in the plain";
 text.match(/ain/y);
 3 ain,ain,ain
 
 Perform a global case-sensitive search for "ain":
 let text = "The rain in SPAIN stays mainly in the plain!";
-text.match(/ain/gi);
+text.match(/ain/gi); // ["ain", "AIN", "ain", "ain"]
+The g flag at the end of the regular expression indicates that the regular expression should match all occurrences of the pattern, 
+ not just the first one.
+
+The i flag at the end of the regular expression indicates that the regular expression should be case-insensitive.
 
 NOTE
 If a reular expression does not include the g mdoifier (global search),match() will return only the first match in the
@@ -929,6 +929,7 @@ Extra large or extra small numbers can be written with scientific(exponent)notat
 EXAMPLE
 let x = 123e5; //12300000
 let y = 123e-5; //0.00123
+
 INTERGER PRECISION
 Integers(numbers without a period or exponent notation) are accurate up to 15 digits.
 EXAMPLE
@@ -936,6 +937,7 @@ let x = 9^15
 let y = 9^17
 
 The maximum number of decimals is 17
+
 FLOATING PRECISION
 Floating point arithmetic is not always 100% accurate
 let x = 0.2+ 0.1;
@@ -997,13 +999,16 @@ Javascript uses that operator to contenate the strings.
 NaN-Not a number.
 NaN is a JavaScript reserved word indicating that a number is not a legal number.
 Trying to do arithmetic with a non-numeric string will result in NaN (Not a nubmer):
+
 EXAMPLE
 let x = 100/ "Apple";
 However if the string is numeric the result will be a number.
+
 EXAMPLE
 let x = 100/"Apple";isNaN(X);
 True
 Watch out for NaN.If you use NaN in a mathematical operation,the result will also be NaN:
+
 EXAMPLE
 let x = NaN;
 let y = 5;
@@ -1012,12 +1017,12 @@ NaN
 
 INFINITY
 Infinity(or-Inifinity) is the value Javascript will return if you calculate a number outside the largest possible number.
+
 EXAMPLE
 let myNumber = 2;
 //Execute until infinity
-while(myNumber!=Infinity)
-{
-myNumber!=myNumber*myNumber;
+while(myNumber!=Infinity){
+myNumber=myNumber*myNumber;
 }
 Division by0(zero)also generates infinity.
 Infinity is a number:typeof infinity returns number.
@@ -1067,6 +1072,7 @@ let y = newNumber(500);
 false
 Note the difference between (x==y) and (x===y).
 (x==y)true or false?
+
 let x = newNumber(500);
 let y = newNumber(500);
 Javascript objects cannot be compared.
@@ -1075,13 +1081,13 @@ false
 Comparing two Javascript objects always returns false.
 
 JAVASCRIPT BIGINT
-Javascript BigInt variables are used to store big integer value that are too big to be represented by a normal 
-Javascript Number.
+Javascript BigInt variables are used to store big integer value that are too big to be represented by a normal Javascript Number.
+
 JAVASCRIPT INTEGER ACCURACY
 Javascript integers are only accurate up to 15 digits:
 
 HOW TO CREATE A BIGINT
-To create a BigInt,appeared to the end of an integer or call BigInt():
+To create a BigInt,appeared to the end of an integer or call bigInt():
 
 EXAMPLES
 let x = 9999999999n;
@@ -1089,12 +1095,15 @@ let y = bigInt(9999999999);
 
 bigInt:A new Javascript Datatype
 The Javascript typeof a BigInt as "bigInt":
+
 EXAMPLE
-let x = BigInt (99999999);
+let x = bigInt (99999999);
 let type = typeof x;
-BigInt is the second numeric data type in Javascript(after Number)
-With BigInt the total number of supported data types in Javascript (after Number)
+
+BigInt is the second numeric data type in Javascript(after Number).
+With BigInt the total number of supported data types in Javascript (after Number).
 With BigInt the total number of supported data types in Javascript is 8:
+
 1.String
 2.Number
 3.BigInt
@@ -1111,6 +1120,7 @@ Example
 let x = 9007199254740995n;
 let y = 900719925440995n;
 let z = x * y;
+
 NOTE
 Arithmetic between a BigInt and a Number is not allowed(type conversion lose information)
 Unsigned right shift (>>>) cannot be done on a BigInt (it does not have a fixed width).
@@ -1120,6 +1130,7 @@ A BigInt can not have decimals.
 
 BIGINT,Hex,Octal and Binary
 BigInt can also be written in hexadecimal,octal,or binary notation:
+
 BIGINT HEX EXAMPLE
 let hex = 0x2000000003n;
 let hex = 0.4000000003n;
