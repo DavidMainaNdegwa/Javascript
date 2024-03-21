@@ -1,0 +1,112 @@
+Array Search Methods
+
+Array indexOf()
+Array lastIndexOf()
+Array includes()
+Array find()
+Array findIndex()
+Array findIndex()
+Array findLast()
+Array findLastIndex()
+
+1.JS Array indexOf()
+The indexOf() method searches an array for an element value and returns its position.
+NOTE:The first item has position 0,the second item has position 1,and so on.
+
+EXAMPLE
+Search an array for the item "Apple":
+const fruits = ["Apple","Orange","Apple","Mango"];
+let position = fruits.indexOf("Apple") + 1;
+document.getElementById("demo").innerHTML = "Apple is found in position " + position;
+Apple is found in position 1
+
+Syntax
+array.indexOf(item, start)
+item	Required. The item to search for.
+start	Optional. Where to start the search. 
+Negative values will start at the given position counting from the end, and search to the end.
+Array.indexOf() returns -1 if the item is not found.
+
+If the item is present more than once, it returns the position of the first occurrence.
+
+2.JS Array LastIndexOf()
+Array.lastIndexOf() is the same as Array.indexOf() but returns the position of the last occurrence of the specified element.
+
+EXAMPLE
+Search an array for the item "Apple":
+const fruits = ["Apple","Orange","Apple","Mango"];
+let position = fruits.lastINdexOf("Apple") + 1;
+document.getElementById("demo").innerHTML = "Apple is found in position " + position;
+
+Apple is found in position 3
+
+SYNTAX
+array.lastIndexOf(item, start)
+item	Required. The item to search for
+start	Optional. Where to start the search. Negative values will start at the given position counting from the end, and search to the beginning
+
+3.JS Array includes()
+This allows us to check if an element is present in an array (including NaN,unlike indexOf).
+
+const fruits = ["Banana","Orange","Apple","Mango"];
+document.getElementById("demo").innerHTML=fruits.includes("Mango"); //is true
+SYNTAX
+array.includes(search-item)
+
+Array.includes() allows to check for NaN values.Unlike Array.indexOf()
+
+4.JS Array find()
+The find() method returns the value of the first array element that passes a test function.
+The example finds(returns the value of)the first element that is larger than 18:
+
+Example
+const number = [4,9,16,25,29];
+let first = numbers.find(myFunction);
+
+document.getElementById("demo").innerHTML = "First number over 18 is " + first;
+
+function myFunction(value,index,array) {
+return value > 18;
+}
+
+First number over 18 is 25
+
+Note that the function takes 3 arguments:
+The item value
+The item index
+The array itself
+
+5.JS Array findIndex()
+The findIndex() method returns the index of the first array element that passes a test function.
+const numbers = [4, 9, 16, 25, 29];
+
+document.getElementById("demo").innerHTML = "First number over 18 has index " + numbers.findIndex(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+First number over 18 has index 3
+
+Note that the function takes 3 arguments:
+The item value
+The item index
+The array itself
+
+6.JS Array findLastIndex() Method
+The findLast() Method that will start from the end of an array and return the value of the first element that satisfies a condition.
+
+const temp = [27,28,30,40,42,35,30];
+let high = temp.findLast(x => x > 40);
+
+document.getElementById("demo").innerHTML = "The last temperature over 40 was" + high;
+The last temperature over 40 was 42
+
+7.JS Array findLastIndex() Method
+The findLastIndex() method finds the index of the last element that satisfies a condition.
+
+EXAMPLE
+const temp = [27,28,30,40,42,35,30];
+let pos = temp.findLastIndex(x => x > 40);
+document.getElementById("demo").innerHTML = "The last temperature over 40 was in position " + pos;
+
+The last temperature over 40 was in position 4
