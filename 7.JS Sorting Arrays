@@ -35,7 +35,7 @@ Banana,Orange,Apple,Mango
 
 Mango,Apple,Orange,Banana
 
--By combining sort() and array() you can sort an array in an descending order:
+-By combining sort() and reverse() you can sort an array in an descending order:
 Example:
 //create and displaly an array:
 const fruits = ["Banana","Orange","Apple","Mango"];
@@ -150,6 +150,14 @@ points[j] = k;
 document.getElementById("demo").innerHTML = points;
 }
 
+Initialization: Here, you initialize a loop counter variable that controls how many times the loop runs. This variable is often declared here as well.
+Condition: This is a boolean expression that determines if the loop continues executing. When the condition evaluates to false, the loop stops.
+Increment/Decrement: This expression updates the loop counter variable after each iteration. It's common to increment (add 1) the counter, but decrementing (subtract 1) is also possible.
+
+Increment (common): This is used for iterating through a sequence in a forward direction. You typically start at a low value (like 0) and keep adding 1 until the counter reaches a stopping point (often the size of a collection).
+
+Decrement (less common): This is useful for counting down from a specific value to 0 or a lower limit. It's less frequent but can be helpful in specific scenarios like traversing a list in reverse order.
+
 The for loop has three expressions separated by semicolons:
 
 The first expression (let i = points.length - 1) initializes the loop variable i to the last index of the points array.
@@ -162,7 +170,7 @@ The for loop uses the Math.random() method to generate a random number between 0
 This number is used as an index to swap the elements at the current index and a random index.
 
 9.Find the Lowest(or Highest) Array Value
-There are no built-in functions for finding the max or min vakue in an array.
+There are no built-in functions for finding the max or min value in an array.
 To find the lowest or highest value you have 3 options:
 
 Sort the array and read the first or last element
@@ -250,7 +258,7 @@ const cars = [
 {type:"BMW",year:2010}
 ];
 
-Even if obejcts have properties of different data types,the sort() method can be used to sort the array.
+Even if objects have properties of different data types,the sort() method can be used to sort the array.
 The solution is to write a compare function to compare the property values:
 EXAMPLE
 const cars = [
