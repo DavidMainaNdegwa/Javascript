@@ -10,7 +10,6 @@ Array some()
 Array from()
 Array keys()
 Array entries()
-Array entries()
 Array with()
 Array Spread(...)
 
